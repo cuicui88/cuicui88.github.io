@@ -10,18 +10,18 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content>
+        <meta name="keywords" content="Injury">
     
     <meta name="description" content="圆桌问题X集合中的点到Y集合中的每个点都有连线，所有连线容量都是1，保证两个点只能匹配一次（一个餐桌上只能有同一个单位的一个人）。这种在一个二分图中每个结点可以有多个匹配结点的问题称为二分图多重匹配问题。求解时需要添加源点和汇点，源和汇的边容量分别限制X、Y集合中每一个点匹配的个数。 简历一个二分图，每个代表团为X集合中的结点，每个会议桌为Y集合中的结点，增设源点s和汇点t。从源点s向每个xi结点">
-<meta name="keywords" content="前端 css js react">
+<meta name="keywords" content="Injury">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ceshi">
 <meta property="og:url" content="https://www.cuicui88.com/2019/03/20/ceshi/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
 <meta property="og:description" content="圆桌问题X集合中的点到Y集合中的每个点都有连线，所有连线容量都是1，保证两个点只能匹配一次（一个餐桌上只能有同一个单位的一个人）。这种在一个二分图中每个结点可以有多个匹配结点的问题称为二分图多重匹配问题。求解时需要添加源点和汇点，源和汇的边容量分别限制X、Y集合中每一个点匹配的个数。 简历一个二分图，每个代表团为X集合中的结点，每个会议桌为Y集合中的结点，增设源点s和汇点t。从源点s向每个xi结点">
-<meta property="og:locale" content="zhan-Hans">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/dqhplhzz2008/Study-notes/master/Algorithm/images/duochongpipei1.jpg">
-<meta property="og:updated_time" content="2019-03-20T12:34:30.392Z">
+<meta property="og:updated_time" content="2019-03-20T14:14:58.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ceshi">
 <meta name="twitter:description" content="圆桌问题X集合中的点到Y集合中的每个点都有连线，所有连线容量都是1，保证两个点只能匹配一次（一个餐桌上只能有同一个单位的一个人）。这种在一个二分图中每个结点可以有多个匹配结点的问题称为二分图多重匹配问题。求解时需要添加源点和汇点，源和汇的边容量分别限制X、Y集合中每一个点匹配的个数。 简历一个二分图，每个代表团为X集合中的结点，每个会议桌为Y集合中的结点，增设源点s和汇点t。从源点s向每个xi结点">
@@ -29,9 +29,9 @@
     
 
     
-        <link rel="alternate" href="/" title="木槿少年的博客" type="application/atom+xml">
-    
 
+    
+        <link rel="icon" href="/css/images/favicon.ico">
     
 
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
@@ -76,13 +76,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Sports/">Sports</a></li></ul>
                                     
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
                                 </li>
                             
                         </ul>
@@ -90,14 +90,14 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -109,11 +109,11 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
-            UNTITLED: '(Untitled)',
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -138,7 +138,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sense categoria
+    <a class="page-title-link" href="/categories/Sports/">Sports</a>
     </h1>
 </div>
 
@@ -168,6 +168,11 @@
 		
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Injury/">Injury</a>
+    </div>
+
             </div>
         
         
@@ -361,7 +366,7 @@ void print(int m,int n)//输出安排方案
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/03/20/ceshi/" data-id="cjth6vs1800003ol03kn4iwxk" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.cuicui88.com/2019/03/20/ceshi/" data-id="cjthaiu2s0001vgl08qwb928b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -433,8 +438,8 @@ void print(int m,int n)//输出安排方案
         },
         "headline": "ceshi",
         "image": "https://www.cuicui88.comhttps://raw.githubusercontent.com/dqhplhzz2008/Study-notes/master/Algorithm/images/duochongpipei1.jpg",
-        "keywords": "",
-        "genre": "",
+        "keywords": "Injury",
+        "genre": "Sports",
         "datePublished": "2019-03-20",
         "dateCreated": "2019-03-20",
         "dateModified": "2019-03-20",
@@ -464,53 +469,13 @@ void print(int m,int n)//输出安排方案
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>关注我 :</p>
         <ul class="social-links">
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-facebook"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="google-plus" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-google-plus"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                    <a class="social-tooltip" title="github" href="https://github.com/cuicui88" target="_blank" rel="noopener">
                         <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-weibo"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
-                        <i class="icon fa fa-rss"></i>
                     </a>
                 </li>
                 
@@ -519,17 +484,6 @@ void print(int m,int n)//输出安排方案
     </div>
     
         
-<nav id="article-nav">
-    
-    
-        <a href="/2019/03/20/linearprogramming2/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title"></p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -539,7 +493,7 @@ void print(int m,int n)//输出安排方案
             
                 
     <div class="widget-wrap">
-        <h3 class="widget-title">recents</h3>
+        <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class>
                 
@@ -557,29 +511,9 @@ void print(int m,int n)//输出安排方案
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Sports/">Sports</a></p>
                             <p class="item-title"><a href="/2019/03/20/ceshi/" class="title">ceshi</a></p>
                             <p class="item-date"><time datetime="2019-03-20T12:33:15.000Z" itemprop="datePublished">2019-03-20</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/03/20/linearprogramming2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/dqhplhzz2008/Study-notes/master/Algorithm/images/duochongpipei1.jpg)" alt class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/03/20/linearprogramming2/" class="title"></a></p>
-                            <p class="item-date"><time datetime="2019-03-20T12:29:53.478Z" itemprop="datePublished">2019-03-20</time></p>
                         </div>
                     </li>
                 
@@ -589,27 +523,48 @@ void print(int m,int n)//输出安排方案
 
             
                 
-
-            
-                
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Sports/">Sports</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
 
-            
-                
 
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Injury/">Injury</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Injury/" style="font-size: 10px;">Injury</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
         <div class="widget">
             <ul>
                 
