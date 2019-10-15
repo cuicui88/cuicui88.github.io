@@ -20,12 +20,12 @@
 <meta property="og:site_name" content="木槿少年的博客">
 <meta property="og:description" content="leetcode 617题  621题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/example617.png">
-<meta property="og:updated_time" content="2019-10-15T14:04:47.254Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/example617.jpg">
+<meta property="og:updated_time" content="2019-10-15T14:08:28.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-617-621">
 <meta name="twitter:description" content="leetcode 617题  621题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/example617.png">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/example617.jpg">
     
 
     
@@ -179,8 +179,7 @@
         <div class="article-entry" itemprop="articleBody">
             <h2 id="leetcode-617题-621题"><a href="#leetcode-617题-621题" class="headerlink" title="leetcode 617题  621题"></a>leetcode 617题  621题</h2><a id="more"></a>
 <h3 id="leetcode617题题目"><a href="#leetcode617题题目" class="headerlink" title="leetcode617题题目"></a>leetcode617题题目</h3><p>给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。</p>
-<p>你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。</p>
-<p><img src="http://cuicui88.xyz/images/example617.png" alt="example1"></p>
+<p>你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。<img src="http://cuicui88.xyz/images/example617.jpg" alt="example1"></p>
 <h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var mergeTrees = function(t1, t2) &#123;</span><br><span class="line">    if(t1==null)&#123;</span><br><span class="line">        return t2;</span><br><span class="line">    &#125;</span><br><span class="line">    if(t2==null)&#123;</span><br><span class="line">        return t1;</span><br><span class="line">    &#125;</span><br><span class="line">    t1.val += t2.val;</span><br><span class="line">    t1.left = mergeTrees(t1.left,t2.left);</span><br><span class="line">    t1.right = mergeTrees(t1.right,t2.right);</span><br><span class="line">    return t1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="leetcode621题题目："><a href="#leetcode621题题目：" class="headerlink" title="leetcode621题题目："></a>leetcode621题题目：</h3><p>给定一个用字符数组表示的 CPU 需要执行的任务列表。其中包含使用大写的 A - Z 字母表示的26 种不同种类的任务。任务可以以任意顺序执行，并且每个任务都可以在 1 个单位时间内执行完。CPU 在任何一个单位时间内都可以执行一个任务，或者在待命状态。</p>
@@ -188,7 +187,7 @@
 <p>你需要计算完成所有任务所需要的最短时间。</p>
 <h5 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;输入: tasks = [“A”,”A”,”A”,”B”,”B”,”B”], n = 2<br>&nbsp;&nbsp;&nbsp;&nbsp;输出: 8<br>&nbsp;&nbsp;&nbsp;&nbsp;执行顺序: A -&gt; B -&gt; (待命) -&gt; A -&gt; B -&gt; (待命) -&gt; A -&gt; B.</p>
 <h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var leastInterval = function(tasks, n) &#123;</span><br><span class="line">    var obj = &#123;&#125;;</span><br><span class="line">    for(var i=0;i&lt;tasks.length;i++)&#123;</span><br><span class="line">        if(obj[tasks[i]]!=undefined)&#123;</span><br><span class="line">            obj[tasks[i]]++;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            obj[tasks[i]]=1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var maxValue = 0;</span><br><span class="line">    var count=0;</span><br><span class="line">    for(var key in obj)&#123;</span><br><span class="line">        if(maxValue&lt;obj[key])&#123;</span><br><span class="line">            maxValue = obj[key];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for(var key in obj)&#123;</span><br><span class="line">        if(maxValue==obj[key])&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return Math.max.call(null,tasks.length,(maxValue-1)*(n+1)+count);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://cuicui88.xyz/images/taylor.jpg" alt="taylor swift"></p>
+<p><img src="http://cuicui88.xyz/images/taylor2.jpg" alt="taylor swift"></p>
 
         </div>
         <footer class="article-footer">
@@ -196,7 +195,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/15/leetcode-617-621/" data-id="ck1rx588m0000f4l00t7br4ni" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/10/15/leetcode-617-621/" data-id="ck1rx9qrj0001ygl0u8ue2m3a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -267,7 +266,7 @@
             "name": "winnie"
         },
         "headline": "leetcode-617-621",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/example617.png",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/example617.jpg",
         "keywords": "leetcode",
         "genre": "learn",
         "datePublished": "2019-10-15",
@@ -351,7 +350,7 @@
                             <a href="/2019/10/15/leetcode-617-621/" class="thumbnail">
     
     
-        <span style="background-image:url(http://cuicui88.xyz/images/example617.png)" alt="leetcode-617-621" class="thumbnail-image"></span>
+        <span style="background-image:url(http://cuicui88.xyz/images/example617.jpg)" alt="leetcode-617-621" class="thumbnail-image"></span>
     
     
 </a>
