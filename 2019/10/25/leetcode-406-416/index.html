@@ -21,7 +21,7 @@
 <meta property="og:description" content="leetcode 406题 416题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://cuicui88.xyz/images/fanning-1.jpg">
-<meta property="og:updated_time" content="2019-10-25T01:20:25.461Z">
+<meta property="og:updated_time" content="2019-10-25T01:23:16.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-406-416">
 <meta name="twitter:description" content="leetcode 406题 416题">
@@ -194,7 +194,7 @@
 <p>输出：false</p>
 <p>解释：数组不能分割成两个元素和相等的子集.</p>
 <h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var canPartition = function(nums) &#123;</span><br><span class="line">    var sum = 0;</span><br><span class="line">    for(var h=0;h&lt;nums.length;h++)&#123;</span><br><span class="line">        sum = sum + nums[h];</span><br><span class="line">    &#125;</span><br><span class="line">    if(sum%2!=0)&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    var halfSum = parseInt(sum/2);</span><br><span class="line">    var arr = [];</span><br><span class="line">    for(var j=0;j&lt;halfSum+1;j++)&#123;</span><br><span class="line">        arr[j] = false;</span><br><span class="line">    &#125;</span><br><span class="line">    arr[0] = true;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        for(var j=halfSum;j&gt;=nums[i];j--)&#123;</span><br><span class="line">            arr[j] = (arr[j]||arr[j-nums[i]])?true:false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr[halfSum];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://cuicui88.xyz/images/fanning-1.jpg" alt="示例"></p>
+<p><img src="http://cuicui88.xyz/images/fanning-1.jpg" alt="艾丽.范宁"></p>
 
         </div>
         <footer class="article-footer">
@@ -202,7 +202,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/25/leetcode-406-416/" data-id="ck25g8ig20004s0l05j1mgxct" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/10/25/leetcode-406-416/" data-id="ck25gcbly00041wl00fc1znm2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
