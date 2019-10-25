@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode 647 771 | 木槿少年的博客</title>
+    <title>leetcode-406-416 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode 647题 771题">
+    <meta name="description" content="leetcode 406题 416题">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 647 771">
-<meta property="og:url" content="https://www.cuicui88.com/2019/10/14/leetcode-647-771/index.html">
+<meta property="og:title" content="leetcode-406-416">
+<meta property="og:url" content="https://www.cuicui88.com/2019/10/25/leetcode-406-416/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode 647题 771题">
+<meta property="og:description" content="leetcode 406题 416题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/taylor1.jpg">
-<meta property="og:updated_time" content="2019-10-15T14:12:43.227Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/fanning-1.jpg">
+<meta property="og:updated_time" content="2019-10-25T01:20:25.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 647 771">
-<meta name="twitter:description" content="leetcode 647题 771题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/taylor1.jpg">
+<meta name="twitter:title" content="leetcode-406-416">
+<meta name="twitter:description" content="leetcode 406题 416题">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/fanning-1.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-647-771" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-406-416" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode 647 771
+        leetcode-406-416
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/10/14/leetcode-647-771/" class="article-date">
-            <time datetime="2019-10-14T13:26:01.000Z" itemprop="datePublished">2019-10-14</time>
+        <a href="/2019/10/25/leetcode-406-416/" class="article-date">
+            <time datetime="2019-10-25T01:12:11.000Z" itemprop="datePublished">2019-10-25</time>
         </a>
     </div>
 
@@ -177,32 +177,24 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode-647题-771题"><a href="#leetcode-647题-771题" class="headerlink" title="leetcode 647题 771题"></a>leetcode 647题 771题</h2><a id="more"></a>
-<h3 id="leetcode-647题-题目："><a href="#leetcode-647题-题目：" class="headerlink" title="leetcode 647题 题目："></a>leetcode 647题 题目：</h3><p>给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。</p>
-<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。</p>
-<p>示例1：</p>
-<p>&emsp;&emsp;输入: “abc”</p>
-<p>&emsp;&emsp;输出: 3</p>
-<p>&emsp;&emsp;解释: 三个回文子串: “a”, “b”, “c”.</p>
-<p>示例2：</p>
-<p>&emsp;&emsp;输入: “aaa”</p>
-<p>&emsp;&emsp;输出: 6</p>
-<p>&emsp;&emsp;说明: 6个回文子串: “a”, “a”, “a”, “aa”, “aa”, “aaa”.</p>
-<h5 id="解答1（复杂度高的版本）："><a href="#解答1（复杂度高的版本）：" class="headerlink" title="解答1（复杂度高的版本）："></a>解答1（复杂度高的版本）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var countSubstrings = function(s) &#123;</span><br><span class="line">    var count = s.length;</span><br><span class="line">    for(var len=2;len&lt;=s.length;len++)&#123;</span><br><span class="line">        for(var i=0;i&lt;=s.length-len;i++)&#123;</span><br><span class="line">            var subStr = s.substr(i,len);</span><br><span class="line">            if(judge(subStr))&#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">//首先判断一个字符串是否为回文子串</span><br><span class="line">function judge(s)&#123;</span><br><span class="line">    var s = s.split(&apos;&apos;);</span><br><span class="line">    if(s.length==1)&#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=0;i&lt;parseInt(s.length/2);i++)&#123;</span><br><span class="line">        if(s[i]!=s[s.length-1-i])&#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="解答2（复杂度低的版本）："><a href="#解答2（复杂度低的版本）：" class="headerlink" title="解答2（复杂度低的版本）："></a>解答2（复杂度低的版本）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var countSubstrings = function(s) &#123;</span><br><span class="line">    var count = 0;</span><br><span class="line">    for(var i=0;i&lt;=s.length;i++)&#123;</span><br><span class="line">        count += countSinglePoint(s,i,i);//计算子串长度为奇数对应的回文子串个数</span><br><span class="line">        count += countSinglePoint(s,i,i+1);//计算子串长度为偶数对应的回文子串个数</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">&#125;;</span><br><span class="line">function countSinglePoint(s,i,j)&#123;</span><br><span class="line">    var num = 0;</span><br><span class="line">    while(i&gt;=0&amp;&amp;j&lt;s.length&amp;&amp;s[i]==s[j])&#123;</span><br><span class="line">        i--;</span><br><span class="line">        j++;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    return num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode-406题-416题"><a href="#leetcode-406题-416题" class="headerlink" title="leetcode 406题 416题"></a>leetcode 406题 416题</h2><a id="more"></a>
+<h3 id="leetcode406题题目："><a href="#leetcode406题题目：" class="headerlink" title="leetcode406题题目："></a>leetcode406题题目：</h3><p>假设有打乱顺序的一群人站成一个队列。 每个人由一个整数对(h, k)表示，其中h是这个人的身高，k是排在这个人前面且身高大于或等于h的人数。 编写一个算法来重建这个队列。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输入：[[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]</p>
+<p>输出：[[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]</p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var reconstructQueue = function(people) &#123;</span><br><span class="line"></span><br><span class="line">    var result = [];</span><br><span class="line">    people.sort(compare);</span><br><span class="line">    for(var i=0;i&lt;people.length;i++)&#123;</span><br><span class="line">        var index = people[i][1];</span><br><span class="line">        result.splice(index,0,people[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br><span class="line">function compare(a,b)&#123;</span><br><span class="line">    if(a[0]==b[0])&#123;</span><br><span class="line">        return a[1]-b[1];</span><br><span class="line">    &#125;</span><br><span class="line">    return b[0]-a[0];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode771题题目："><a href="#leetcode771题题目：" class="headerlink" title="leetcode771题题目："></a>leetcode771题题目：</h3><p>给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p>
-<p>J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。</p>
-<p>示例1：</p>
-<p>&emsp;&emsp;输入: J = “aA”, S = “aAAbbbb”</p>
-<p>&emsp;&emsp;输出: 3</p>
+<h3 id="leetcode416题题目："><a href="#leetcode416题题目：" class="headerlink" title="leetcode416题题目："></a>leetcode416题题目：</h3><p>给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<p>注意: 每个数组中的元素不会超过 100；数组的大小不会超过 200。</p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>示例1：</p>
+<p>输入：[1, 5, 11, 5]</p>
+<p>输出：true</p>
+<p>解释：数组可以分割成 [1, 5, 5] 和 [11].</p>
 <p>示例2：</p>
-<p>&emsp;&emsp;输入：J = “z”, S = “ZZ”</p>
-<p>&emsp;&emsp;输出：0</p>
-<h5 id="解答1："><a href="#解答1：" class="headerlink" title="解答1："></a>解答1：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var numJewelsInStones = function(J, S) &#123;</span><br><span class="line">    var str1 = J.split(&apos;&apos;);</span><br><span class="line">    var str2 = S.split(&apos;&apos;);</span><br><span class="line">    var count = 0;</span><br><span class="line">    for(var i=0;i&lt;str2.length;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;str1.length;j++)&#123;</span><br><span class="line">            if(str2[i]==str1[j])&#123;</span><br><span class="line">                count++;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h5 id="解答2："><a href="#解答2：" class="headerlink" title="解答2："></a>解答2：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var numJewelsInStones = function(J, S) &#123;</span><br><span class="line">    var str1 = J.split(&apos;&apos;);</span><br><span class="line">    var str2 = S.split(&apos;&apos;);</span><br><span class="line">    var obj = &#123;&#125;;</span><br><span class="line">    var count = 0;</span><br><span class="line">    for(var i=0;i&lt;str1.length;i++)&#123;</span><br><span class="line">       obj[str1[i]] = 1;</span><br><span class="line">    &#125;</span><br><span class="line">     for(var j=0;j&lt;str2.length;j++)&#123;</span><br><span class="line">        if(obj[str2[j]]==1)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="解答3："><a href="#解答3：" class="headerlink" title="解答3："></a>解答3：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var numJewelsInStones = function(J, S) &#123;</span><br><span class="line">    var str1 = J.split(&apos;&apos;);</span><br><span class="line">    var str2 = S.split(&apos;&apos;);</span><br><span class="line">    return str2.filter(item=&gt;str1.includes(item)).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://cuicui88.xyz/images/taylor1.jpg" alt="taylor swift"></p>
+<p>输入：[1, 2, 3, 5]</p>
+<p>输出：false</p>
+<p>解释：数组不能分割成两个元素和相等的子集.</p>
+<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var canPartition = function(nums) &#123;</span><br><span class="line">    var sum = 0;</span><br><span class="line">    for(var h=0;h&lt;nums.length;h++)&#123;</span><br><span class="line">        sum = sum + nums[h];</span><br><span class="line">    &#125;</span><br><span class="line">    if(sum%2!=0)&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    var halfSum = parseInt(sum/2);</span><br><span class="line">    var arr = [];</span><br><span class="line">    for(var j=0;j&lt;halfSum+1;j++)&#123;</span><br><span class="line">        arr[j] = false;</span><br><span class="line">    &#125;</span><br><span class="line">    arr[0] = true;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        for(var j=halfSum;j&gt;=nums[i];j--)&#123;</span><br><span class="line">            arr[j] = (arr[j]||arr[j-nums[i]])?true:false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr[halfSum];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="http://cuicui88.xyz/images/fanning-1.jpg" alt="示例"></p>
 
         </div>
         <footer class="article-footer">
@@ -210,7 +202,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/14/leetcode-647-771/" data-id="ck25g8iho000ns0l03df1vo9c" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/10/25/leetcode-406-416/" data-id="ck25g8ig20004s0l05j1mgxct" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -280,16 +272,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode 647 771",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/taylor1.jpg",
+        "headline": "leetcode-406-416",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/fanning-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-10-14",
-        "dateCreated": "2019-10-14",
-        "dateModified": "2019-10-15",
-        "url": "https://www.cuicui88.com/2019/10/14/leetcode-647-771/",
-        "description": "leetcode 647题 771题"
-        "wordCount": 746
+        "datePublished": "2019-10-25",
+        "dateCreated": "2019-10-25",
+        "dateModified": "2019-10-25",
+        "url": "https://www.cuicui88.com/2019/10/25/leetcode-406-416/",
+        "description": "leetcode 406题 416题"
+        "wordCount": 356
     }
 </script>
 
@@ -337,20 +329,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/10/15/leetcode-617-621/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-617-621
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/04/17/micro-public-bank-interview/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/10/22/leetcode-112-113-437/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">实习面试-微众银行</p>
+        <p class="article-nav-title">leetcode-112-113-437</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -564,7 +546,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/10/14/leetcode-647-771/';
+    var disqus_url = 'https://www.cuicui88.com/2019/10/25/leetcode-406-416/';
     
     (function() {
     var dsq = document.createElement('script');
