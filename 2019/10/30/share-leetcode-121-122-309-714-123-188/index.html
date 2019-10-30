@@ -21,7 +21,7 @@
 <meta property="og:description" content="leetcode股票题目121题122题309题714题123题188题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://cuicui88.xyz/images/share-1.jpg">
-<meta property="og:updated_time" content="2019-10-30T03:39:19.391Z">
+<meta property="og:updated_time" content="2019-10-30T03:47:35.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="share-leetcode-121-122-309-714-123-188">
 <meta name="twitter:description" content="leetcode股票题目121题122题309题714题123题188题">
@@ -178,8 +178,7 @@
         
         <div class="article-entry" itemprop="articleBody">
             <h2 id="leetcode股票题目121题122题309题714题123题188题"><a href="#leetcode股票题目121题122题309题714题123题188题" class="headerlink" title="leetcode股票题目121题122题309题714题123题188题"></a>leetcode股票题目121题122题309题714题123题188题</h2><a id="more"></a>
-<h3 id="题目列表（题目从易到难）："><a href="#题目列表（题目从易到难）：" class="headerlink" title="题目列表（题目从易到难）："></a>题目列表（题目从易到难）：</h3><h4 id="121-买卖股票的最佳时机"><a href="#121-买卖股票的最佳时机" class="headerlink" title="121. 买卖股票的最佳时机"></a>121. 买卖股票的最佳时机</h4><h4 id="122-买卖股票的最佳时机-II"><a href="#122-买卖股票的最佳时机-II" class="headerlink" title="122. 买卖股票的最佳时机 II"></a>122. 买卖股票的最佳时机 II</h4><h4 id="309-最佳买卖股票时机含冷冻期"><a href="#309-最佳买卖股票时机含冷冻期" class="headerlink" title="309. 最佳买卖股票时机含冷冻期"></a>309. 最佳买卖股票时机含冷冻期</h4><h4 id="714-买卖股票的最佳时机含手续费"><a href="#714-买卖股票的最佳时机含手续费" class="headerlink" title="714. 买卖股票的最佳时机含手续费"></a>714. 买卖股票的最佳时机含手续费</h4><h4 id="123-买卖股票的最佳时机-III"><a href="#123-买卖股票的最佳时机-III" class="headerlink" title="123. 买卖股票的最佳时机 III"></a>123. 买卖股票的最佳时机 III</h4><h4 id="188-买卖股票的最佳时机-IV"><a href="#188-买卖股票的最佳时机-IV" class="headerlink" title="188. 买卖股票的最佳时机 IV"></a>188. 买卖股票的最佳时机 IV</h4><h3 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h3><p>&nbsp;&nbsp;&amp;这 6 道股票买卖问题是有共性的，我们通过对第四题（限制最大交易次数为 k）的分析一道一道解决。因为第四题是一个最泛化的形式，其他的问题都是这个形式的简化。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;这 6 道股票买卖问题是有共性的，我们通过对第四题（限制最大交易次数为 k）的分析一道一道解决。因为第四题是一个最泛化的形式，其他的问题都是这个形式的简化。</p>
+<h3 id="题目列表（题目从易到难）："><a href="#题目列表（题目从易到难）：" class="headerlink" title="题目列表（题目从易到难）："></a>题目列表（题目从易到难）：</h3><h4 id="121-买卖股票的最佳时机"><a href="#121-买卖股票的最佳时机" class="headerlink" title="121. 买卖股票的最佳时机"></a>121. 买卖股票的最佳时机</h4><h4 id="122-买卖股票的最佳时机-II"><a href="#122-买卖股票的最佳时机-II" class="headerlink" title="122. 买卖股票的最佳时机 II"></a>122. 买卖股票的最佳时机 II</h4><h4 id="309-最佳买卖股票时机含冷冻期"><a href="#309-最佳买卖股票时机含冷冻期" class="headerlink" title="309. 最佳买卖股票时机含冷冻期"></a>309. 最佳买卖股票时机含冷冻期</h4><h4 id="714-买卖股票的最佳时机含手续费"><a href="#714-买卖股票的最佳时机含手续费" class="headerlink" title="714. 买卖股票的最佳时机含手续费"></a>714. 买卖股票的最佳时机含手续费</h4><h4 id="123-买卖股票的最佳时机-III"><a href="#123-买卖股票的最佳时机-III" class="headerlink" title="123. 买卖股票的最佳时机 III"></a>123. 买卖股票的最佳时机 III</h4><h4 id="188-买卖股票的最佳时机-IV"><a href="#188-买卖股票的最佳时机-IV" class="headerlink" title="188. 买卖股票的最佳时机 IV"></a>188. 买卖股票的最佳时机 IV</h4><h3 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;这 6 道股票买卖问题是有共性的，我们通过对第四题（限制最大交易次数为 k）的分析一道一道解决。因为第四题是一个最泛化的形式，其他的问题都是这个形式的简化。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;第一题是只进行一次交易，相当于 k = 1；第二题是不限交易次数，相当于 k = +infinity（正无穷）；第三题是只进行 2 次交易，相当于 k = 2；剩下两道也是不限次数，但是加了交易「冷冻期」和「手续费」的额外条件，其实就是第二题的变种，都很容易处理。</p>
 <h5 id="1-穷举："><a href="#1-穷举：" class="headerlink" title="1.穷举："></a>1.穷举：</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;在这里，我们具体到每一天，看看总共有几种可能的「状态」，再找出每个「状态」对应的「选择」。我们要穷举所有「状态」，穷举的目的是根据对应的「选择」更新状态。 </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;每天都有三种「选择」：买入、卖出、无操作，我们用 buy, sell, rest 表示这三种选择。</p>
@@ -254,7 +253,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/30/share-leetcode-121-122-309-714-123-188/" data-id="ck2cqeu9n001j6cl01lem0hxt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/10/30/share-leetcode-121-122-309-714-123-188/" data-id="ck2cqpa8g001j04l0oa630yan" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -333,7 +332,7 @@
         "dateModified": "2019-10-30",
         "url": "https://www.cuicui88.com/2019/10/30/share-leetcode-121-122-309-714-123-188/",
         "description": "leetcode股票题目121题122题309题714题123题188题"
-        "wordCount": 1575
+        "wordCount": 1572
     }
 </script>
 
