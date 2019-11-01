@@ -20,12 +20,12 @@
 <meta property="og:site_name" content="木槿少年的博客">
 <meta property="og:description" content="leetcode287题297题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuciui88.xyz/images/297-1.jpg">
-<meta property="og:updated_time" content="2019-11-01T03:13:33.695Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/297-1.jpg">
+<meta property="og:updated_time" content="2019-11-01T03:16:20.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-287-297">
 <meta name="twitter:description" content="leetcode287题297题">
-<meta name="twitter:image" content="http://cuciui88.xyz/images/297-1.jpg">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/297-1.jpg">
     
 
     
@@ -187,7 +187,7 @@
 <hr>
 <h3 id="leetcode297题："><a href="#leetcode297题：" class="headerlink" title="leetcode297题："></a>leetcode297题：</h3><p>序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。</p>
 <p>请设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，你只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。</p>
-<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuciui88.xyz/images/297-1.jpg" alt="示例"></p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/297-1.jpg" alt="示例"></p>
 <p>解答：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Encodes a tree to a single string.</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;TreeNode&#125; root</span><br><span class="line"> * @return &#123;string&#125;</span><br><span class="line"> */</span><br><span class="line">var serialize = function(root) &#123;</span><br><span class="line">    var result = [];</span><br><span class="line">    function sertalize1(root)&#123;//此处使用深度优先遍历（或先序遍历）来进行实现的</span><br><span class="line">        if(root==null)&#123;</span><br><span class="line">            result.push(&apos;#&apos;);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        result.push(root.val);</span><br><span class="line">        sertalize1(root.left);</span><br><span class="line">        sertalize1(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    sertalize1(root);</span><br><span class="line">    return result.join(&apos;,&apos;);//输出是用逗号连接起来的字符串</span><br><span class="line">    //例题中的例子输出为：&quot;1,2,#,#,3,4,#,#,5,#,#&quot;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Decodes your encoded data to tree.</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;string&#125; data</span><br><span class="line"> * @return &#123;TreeNode&#125;</span><br><span class="line"> */</span><br><span class="line">var deserialize = function(data) &#123;</span><br><span class="line">    data = data.split(&quot;,&quot;);</span><br><span class="line">    var index = 0;</span><br><span class="line">   </span><br><span class="line">    function deserializer(data) &#123;</span><br><span class="line">        if(index &gt; data.length || data[index] === &quot;#&quot;) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        var node = new TreeNode(parseInt(data[index]));</span><br><span class="line">        index++;</span><br><span class="line">        node.left = deserializer(data);</span><br><span class="line">        index++;</span><br><span class="line">        node.right = deserializer(data);</span><br><span class="line">        return node;</span><br><span class="line">    &#125;    </span><br><span class="line">    return deserializer(data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Your functions will be called as such:</span><br><span class="line"> * deserialize(serialize(root));</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
 
@@ -197,7 +197,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/11/01/leetcode-287-297/" data-id="ck2fkd60z0004t4l0v7koazs4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/01/leetcode-287-297/" data-id="ck2fkgdpz00046cl0ripx5z9p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -268,7 +268,7 @@
             "name": "winnie"
         },
         "headline": "leetcode-287-297",
-        "image": "https://www.cuicui88.comhttp://cuciui88.xyz/images/297-1.jpg",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/297-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
         "datePublished": "2019-11-01",
@@ -352,7 +352,7 @@
                             <a href="/2019/11/01/leetcode-287-297/" class="thumbnail">
     
     
-        <span style="background-image:url(http://cuciui88.xyz/images/297-1.jpg)" alt="leetcode-287-297" class="thumbnail-image"></span>
+        <span style="background-image:url(http://cuicui88.xyz/images/297-1.jpg)" alt="leetcode-287-297" class="thumbnail-image"></span>
     
     
 </a>
