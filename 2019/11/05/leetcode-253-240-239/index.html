@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-494-538 | 木槿少年的博客</title>
+    <title>leetcode-253-240-239 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode 494 538题">
+    <meta name="description" content="leetcode239题240题253题">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-494-538">
-<meta property="og:url" content="https://www.cuicui88.com/2019/10/21/leetcode-494-538/index.html">
+<meta property="og:title" content="leetcode-253-240-239">
+<meta property="og:url" content="https://www.cuicui88.com/2019/11/05/leetcode-253-240-239/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode 494 538题">
+<meta property="og:description" content="leetcode239题240题253题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/494-1.jpg">
-<meta property="og:updated_time" content="2019-10-21T04:03:35.301Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/239-1.jpg">
+<meta property="og:updated_time" content="2019-11-05T03:50:46.249Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-494-538">
-<meta name="twitter:description" content="leetcode 494 538题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/494-1.jpg">
+<meta name="twitter:title" content="leetcode-253-240-239">
+<meta name="twitter:description" content="leetcode239题240题253题">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/239-1.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-494-538" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-253-240-239" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-494-538
+        leetcode-253-240-239
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/10/21/leetcode-494-538/" class="article-date">
-            <time datetime="2019-10-21T03:49:17.000Z" itemprop="datePublished">2019-10-21</time>
+        <a href="/2019/11/05/leetcode-253-240-239/" class="article-date">
+            <time datetime="2019-11-05T03:39:58.000Z" itemprop="datePublished">2019-11-05</time>
         </a>
     </div>
 
@@ -177,15 +177,23 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode-494-538题"><a href="#leetcode-494-538题" class="headerlink" title="leetcode 494 538题"></a>leetcode 494 538题</h2><a id="more"></a>
-<h3 id="leetcode-494题题目："><a href="#leetcode-494题题目：" class="headerlink" title="leetcode 494题题目："></a>leetcode 494题题目：</h3><p>给定一个非负整数数组，a1, a2, …, an, 和一个目标数，S。现在你有两个符号 + 和 -。对于数组中的任意一个整数，你都可以从 + 或 -中选择一个符号添加在前面。</p>
-<p>返回可以使最终数组和为目标数 S 的所有添加符号的方法数。</p>
-<p><img src="http://cuicui88.xyz/images/494-1.jpg" alt="示例"></p>
-<h4 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var findTargetSumWays = function(nums, S) &#123;</span><br><span class="line">    var sum = 0;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        sum = sum + nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    if(sum&lt;S||(sum+S)%2!=0)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    var arr = [];</span><br><span class="line">    var w = parseInt((sum+S)/2);</span><br><span class="line">    for(var j=0;j&lt;w+1;j++)&#123;</span><br><span class="line">        arr[j] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    arr[0] = 1;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        for(var j=w;j&gt;=nums[i];j--)&#123;</span><br><span class="line">            arr[j] = arr[j] + arr[j-nums[i]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr[w];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode239题240题253题"><a href="#leetcode239题240题253题" class="headerlink" title="leetcode239题240题253题"></a>leetcode239题240题253题</h2><a id="more"></a>
+<h3 id="leetcode239题（滑动窗口最大值）："><a href="#leetcode239题（滑动窗口最大值）：" class="headerlink" title="leetcode239题（滑动窗口最大值）："></a>leetcode239题（滑动窗口最大值）：</h3><p>给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。</p>
+<p>返回滑动窗口中的最大值。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/239-1.jpg" alt="示例"></p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var maxSlidingWindow = function(nums, k) &#123;</span><br><span class="line">    if(nums.length==0)&#123;</span><br><span class="line">        return [];</span><br><span class="line">    &#125;</span><br><span class="line">    var result = [];</span><br><span class="line">    for(var i=0;i&lt;=nums.length-k;i++)&#123;</span><br><span class="line">        var tempArr = nums.slice(i,i+k);</span><br><span class="line">        result.push(Math.max.apply(null,tempArr));</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode538题题目："><a href="#leetcode538题题目：" class="headerlink" title="leetcode538题题目："></a>leetcode538题题目：</h3><p>给定一个二叉搜索树（Binary Search Tree），把它转换成为累加树（Greater Tree)，使得每个节点的值是原来的节点值加上所有大于它的节点值之和。</p>
-<p><img src="http://cuicui88.xyz/images/538-1.jpg" alt="示例"></p>
-<h4 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var convertBST = function(root) &#123;</span><br><span class="line">    var num = 0;</span><br><span class="line">    function convert1(root)&#123;</span><br><span class="line">        if(root==null)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        convert1(root.right);</span><br><span class="line">        root.val = root.val + num;</span><br><span class="line">        num = root.val;</span><br><span class="line">        convert1(root.left);</span><br><span class="line">    &#125;</span><br><span class="line">    convert1(root);</span><br><span class="line">    return root;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="leetcode240题（搜索二维矩阵2）："><a href="#leetcode240题（搜索二维矩阵2）：" class="headerlink" title="leetcode240题（搜索二维矩阵2）："></a>leetcode240题（搜索二维矩阵2）：</h3><p>编写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：</p>
+<p>每行的元素从左到右升序排列。<br>每列的元素从上到下升序排列。</p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/240-1.jpg" alt="示例"></p>
+<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var searchMatrix = function(matrix, target) &#123;</span><br><span class="line">    if(matrix.length==0||matrix[0].length==0)&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    var row = matrix.length;</span><br><span class="line">    var column = matrix[0].length;</span><br><span class="line">    var i = row-1;</span><br><span class="line">    var j = 0;</span><br><span class="line">    while(i&gt;=0&amp;&amp;j&lt;column)&#123;</span><br><span class="line">        if(target&lt;matrix[i][j])&#123;</span><br><span class="line">            if(i==0)&#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">        &#125;else if(target&gt;matrix[i][j])&#123;</span><br><span class="line">            if(j==column-1)&#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="leetcode253题（会议室）："><a href="#leetcode253题（会议室）：" class="headerlink" title="leetcode253题（会议室）："></a>leetcode253题（会议室）：</h3><p>给定一个会议时间安排的数组，每个会议时间都会包括开始和结束的时间 [[s1,e1],[s2,e2],…] (si &lt; ei)，为避免会议冲突，同时要考虑充分利用会议室资源，请你计算至少需要多少间会议室，才能满足这些会议安排。 </p>
+<h5 id="示例：-2"><a href="#示例：-2" class="headerlink" title="示例："></a>示例：</h5><p>输入: [[0, 30],[5, 10],[15, 20]] </p>
+<p>输出: 2 </p>
+<p>输入: [[7,10],[2,4]] </p>
+<p>输出: 1 </p>
+<h5 id="解答：-2"><a href="#解答：-2" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function interval(s,e)&#123;</span><br><span class="line">    this.start = s;</span><br><span class="line">    this.end = e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var minMeetingRooms = function(intervals) &#123;</span><br><span class="line">    var starts = [];</span><br><span class="line">    var ends = [];</span><br><span class="line">    for(var i=0;i&lt;intervals.length;i++)&#123;</span><br><span class="line">        starts.push(intervals[i].start);</span><br><span class="line">        ends.push(intervals[i].end);</span><br><span class="line">    &#125;</span><br><span class="line">    starts.sort(compare);</span><br><span class="line">    ends.sort(compare);</span><br><span class="line">    var i=0;</span><br><span class="line">    var j=0;</span><br><span class="line">    var activemeetings = 0;</span><br><span class="line">    var rooms = 0;</span><br><span class="line">    while(i&lt;intervals.length&amp;&amp;j&lt;intervals.length)&#123;</span><br><span class="line">        if(starts[i]&lt;ends[j])&#123;</span><br><span class="line">            activemeetings++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            activemeetings--;//因为后面会出现此时的starts[i]小于另外一个ends[j]，所以仍然会++</span><br><span class="line">            //但是由于其实是不需要++的，所以此处添加一个++</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        rooms = Math.max(rooms,activemeetings);</span><br><span class="line">    &#125;</span><br><span class="line">    return rooms;</span><br><span class="line">&#125;</span><br><span class="line">function compare(a,b)&#123;</span><br><span class="line">    return a-b;</span><br><span class="line">&#125;</span><br><span class="line">console.log(minMeetingRooms([new interval(0,30),new interval(5,10),new interval(15,20)]));</span><br></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -193,7 +201,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/21/leetcode-494-538/" data-id="ck2lbgk72000usol0goga6ku3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/05/leetcode-253-240-239/" data-id="ck2lbgk5i0001sol03lost27n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -263,16 +271,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-494-538",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/494-1.jpg",
+        "headline": "leetcode-253-240-239",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/239-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-10-21",
-        "dateCreated": "2019-10-21",
-        "dateModified": "2019-10-21",
-        "url": "https://www.cuicui88.com/2019/10/21/leetcode-494-538/",
-        "description": "leetcode 494 538题"
-        "wordCount": 363
+        "datePublished": "2019-11-05",
+        "dateCreated": "2019-11-05",
+        "dateModified": "2019-11-05",
+        "url": "https://www.cuicui88.com/2019/11/05/leetcode-253-240-239/",
+        "description": "leetcode239题240题253题"
+        "wordCount": 709
     }
 </script>
 
@@ -320,20 +328,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/10/21/leetcode-448-461/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-448-461
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/10/18/leetcode-543-560/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/04/leetcode-279-283/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode-543-560</p>
+        <p class="article-nav-title">leetcode-279-283</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -547,7 +545,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/10/21/leetcode-494-538/';
+    var disqus_url = 'https://www.cuicui88.com/2019/11/05/leetcode-253-240-239/';
     
     (function() {
     var dsq = document.createElement('script');
