@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-617-621 | 木槿少年的博客</title>
+    <title>leetcode-215-221 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode 617题  621题">
+    <meta name="description" content="leetcode215题221题：">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-617-621">
-<meta property="og:url" content="https://www.cuicui88.com/2019/10/15/leetcode-617-621/index.html">
+<meta property="og:title" content="leetcode-215-221">
+<meta property="og:url" content="https://www.cuicui88.com/2019/11/08/leetcode-215-221/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode 617题  621题">
+<meta property="og:description" content="leetcode215题221题：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/example617.jpg">
-<meta property="og:updated_time" content="2019-10-15T14:08:28.576Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/221-1.jpg">
+<meta property="og:updated_time" content="2019-11-08T03:34:20.170Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-617-621">
-<meta name="twitter:description" content="leetcode 617题  621题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/example617.jpg">
+<meta name="twitter:title" content="leetcode-215-221">
+<meta name="twitter:description" content="leetcode215题221题：">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/221-1.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-617-621" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-215-221" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-617-621
+        leetcode-215-221
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/10/15/leetcode-617-621/" class="article-date">
-            <time datetime="2019-10-15T13:51:56.000Z" itemprop="datePublished">2019-10-15</time>
+        <a href="/2019/11/08/leetcode-215-221/" class="article-date">
+            <time datetime="2019-11-08T03:22:48.000Z" itemprop="datePublished">2019-11-08</time>
         </a>
     </div>
 
@@ -177,17 +177,21 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode-617题-621题"><a href="#leetcode-617题-621题" class="headerlink" title="leetcode 617题  621题"></a>leetcode 617题  621题</h2><a id="more"></a>
-<h3 id="leetcode617题题目"><a href="#leetcode617题题目" class="headerlink" title="leetcode617题题目"></a>leetcode617题题目</h3><p>给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。</p>
-<p>你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。<img src="http://cuicui88.xyz/images/example617.jpg" alt="example1"></p>
-<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var mergeTrees = function(t1, t2) &#123;</span><br><span class="line">    if(t1==null)&#123;</span><br><span class="line">        return t2;</span><br><span class="line">    &#125;</span><br><span class="line">    if(t2==null)&#123;</span><br><span class="line">        return t1;</span><br><span class="line">    &#125;</span><br><span class="line">    t1.val += t2.val;</span><br><span class="line">    t1.left = mergeTrees(t1.left,t2.left);</span><br><span class="line">    t1.right = mergeTrees(t1.right,t2.right);</span><br><span class="line">    return t1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode215题221题："><a href="#leetcode215题221题：" class="headerlink" title="leetcode215题221题："></a>leetcode215题221题：</h2><a id="more"></a>
+<h3 id="leetcode215题（数组中的第K个最大元素）："><a href="#leetcode215题（数组中的第K个最大元素）：" class="headerlink" title="leetcode215题（数组中的第K个最大元素）："></a>leetcode215题（数组中的第K个最大元素）：</h3><p>在未排序的数组中找到第 <strong>k</strong> 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。 </p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输入：[3,2,1,5,6,4]和k=6</p>
+<p>输出：5</p>
+<p>输入：[3,2,3,1,2,4,5,5,6]和k=4</p>
+<p>输出：4</p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">var findKthLargest = function(nums, k) &#123;</span><br><span class="line">    return kth(nums,0,nums.length-1,k);</span><br><span class="line">    function kth(nums,left,right,k)&#123;</span><br><span class="line">        var start = left;</span><br><span class="line">        var end = right;</span><br><span class="line">        var key = nums[start];//表示以第一个元素为参考值</span><br><span class="line">        while(start&lt;end)&#123;</span><br><span class="line">            while(start&lt;end&amp;&amp;nums[end]&lt;=key)&#123;</span><br><span class="line">                end--;</span><br><span class="line">            &#125;</span><br><span class="line">            nums[start]=nums[end];//当出现不小于key的nums[end]时，将其赋值给nums[start]</span><br><span class="line">            while(start&lt;end&amp;&amp;nums[start]&gt;=key)&#123;</span><br><span class="line">                start++;</span><br><span class="line">            &#125;</span><br><span class="line">            nums[end]=nums[start];//当出现大于key的nums[start]时，将其赋值给nums[end]</span><br><span class="line">        &#125;</span><br><span class="line">        if(start==k-1)&#123;</span><br><span class="line">            return key;</span><br><span class="line">        &#125;</span><br><span class="line">        if(start&lt;k-1)&#123;</span><br><span class="line">            return kth(nums,start+1,right,k);</span><br><span class="line">        &#125;</span><br><span class="line">        return kth(nums,left,start-1,k);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode621题题目："><a href="#leetcode621题题目：" class="headerlink" title="leetcode621题题目："></a>leetcode621题题目：</h3><p>给定一个用字符数组表示的 CPU 需要执行的任务列表。其中包含使用大写的 A - Z 字母表示的26 种不同种类的任务。任务可以以任意顺序执行，并且每个任务都可以在 1 个单位时间内执行完。CPU 在任何一个单位时间内都可以执行一个任务，或者在待命状态。</p>
-<p>然而，两个相同种类的任务之间必须有长度为 n 的冷却时间，因此至少有连续 n 个单位时间内 CPU 在执行不同的任务，或者在待命状态。</p>
-<p>你需要计算完成所有任务所需要的最短时间。</p>
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;输入: tasks = [“A”,”A”,”A”,”B”,”B”,”B”], n = 2<br>&nbsp;&nbsp;&nbsp;&nbsp;输出: 8<br>&nbsp;&nbsp;&nbsp;&nbsp;执行顺序: A -&gt; B -&gt; (待命) -&gt; A -&gt; B -&gt; (待命) -&gt; A -&gt; B.</p>
-<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var leastInterval = function(tasks, n) &#123;</span><br><span class="line">    var obj = &#123;&#125;;</span><br><span class="line">    for(var i=0;i&lt;tasks.length;i++)&#123;</span><br><span class="line">        if(obj[tasks[i]]!=undefined)&#123;</span><br><span class="line">            obj[tasks[i]]++;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            obj[tasks[i]]=1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var maxValue = 0;</span><br><span class="line">    var count=0;</span><br><span class="line">    for(var key in obj)&#123;</span><br><span class="line">        if(maxValue&lt;obj[key])&#123;</span><br><span class="line">            maxValue = obj[key];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for(var key in obj)&#123;</span><br><span class="line">        if(maxValue==obj[key])&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return Math.max.call(null,tasks.length,(maxValue-1)*(n+1)+count);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://cuicui88.xyz/images/taylor2.jpg" alt="taylor swift"></p>
+<h3 id="leetcode221题（最大正方形）："><a href="#leetcode221题（最大正方形）：" class="headerlink" title="leetcode221题（最大正方形）："></a>leetcode221题（最大正方形）：</h3><p>在一个由 0 和 1 组成的二维矩阵内，找到只包含 1 的最大正方形，并返回其面积。 </p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/221-1.jpg" alt="示例"></p>
+<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><p>dp[i][j]代表以 i,j为正方形右下角的最大边长是多少？</p>
+<p>动态方程：</p>
+<p>在 matrix[i][j] == “1”，情况下</p>
+<p>​    dp[i][j] = min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var maximalSquare = function(matrix) &#123;</span><br><span class="line">    if(matrix.length==0)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    var max = 0;</span><br><span class="line">    var dp = [];</span><br><span class="line">    for(var i=0;i&lt;=matrix.length;i++)&#123;</span><br><span class="line">        dp[i] = [];</span><br><span class="line">        for(var j=0;j&lt;=matrix[0].length;j++)&#123;</span><br><span class="line">            dp[i][j]=0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=1;i&lt;=matrix.length;i++)&#123;</span><br><span class="line">        for(var j=1;j&lt;=matrix[0].length;j++)&#123;</span><br><span class="line">            if(matrix[i-1][j-1]==1)&#123;</span><br><span class="line">                dp[i][j] = Math.min(dp[i][j-1],dp[i-1][j],dp[i-1][j-1])+1;</span><br><span class="line">                max = Math.max(max,dp[i][j]*dp[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return max;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -195,7 +199,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/15/leetcode-617-621/" data-id="ck2pla9qh001gl4l01oqald80" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/08/leetcode-215-221/" data-id="ck2pla9ll0006l4l0oye0xi6r" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -265,16 +269,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-617-621",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/example617.jpg",
+        "headline": "leetcode-215-221",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/221-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-10-15",
-        "dateCreated": "2019-10-15",
-        "dateModified": "2019-10-15",
-        "url": "https://www.cuicui88.com/2019/10/15/leetcode-617-621/",
-        "description": "leetcode 617题  621题"
-        "wordCount": 396
+        "datePublished": "2019-11-08",
+        "dateCreated": "2019-11-08",
+        "dateModified": "2019-11-08",
+        "url": "https://www.cuicui88.com/2019/11/08/leetcode-215-221/",
+        "description": "leetcode215题221题："
+        "wordCount": 590
     }
 </script>
 
@@ -322,20 +326,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/10/16/leetcode-572-581/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-572-581
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/10/14/leetcode-647-771/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/07/leetcode-226-234/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode 647 771</p>
+        <p class="article-nav-title">leetcode-226-234</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -549,7 +543,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/10/15/leetcode-617-621/';
+    var disqus_url = 'https://www.cuicui88.com/2019/11/08/leetcode-215-221/';
     
     (function() {
     var dsq = document.createElement('script');
