@@ -6,21 +6,26 @@
     
 
     
-    <title>归档 | 木槿少年的博客</title>
+    <title>木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="前端学习">
+        <meta name="keywords" content>
+    
+    <meta name="description" content="title: leetcode-155-160date: 2019-11-14 09:39:01tags:  leetcodecategories: learn  leetcode155题160题：">
 <meta name="keywords" content="前端 css js react">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="木槿少年的博客">
-<meta property="og:url" content="https://www.cuicui88.com/archives/index.html">
+<meta property="og:url" content="https://www.cuicui88.com/2019/11/14/leetcode-155-160/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="前端学习">
+<meta property="og:description" content="title: leetcode-155-160date: 2019-11-14 09:39:01tags:  leetcodecategories: learn  leetcode155题160题：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://cuicui88.xyz/images/160-1.jpg">
+<meta property="og:updated_time" content="2019-11-14T01:56:32.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="木槿少年的博客">
-<meta name="twitter:description" content="前端学习">
+<meta name="twitter:description" content="title: leetcode-155-160date: 2019-11-14 09:39:01tags:  leetcodecategories: learn  leetcode155题160题：">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/160-1.jpg">
     
 
     
@@ -133,508 +138,165 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档
+    未分类
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
+                            <article id="post-leetcode-155-160" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/11/14/leetcode-155-160/" class="article-date">
+            <time datetime="2019-11-14T01:39:01.122Z" itemprop="datePublished">2019-11-14</time>
+        </a>
+    </div>
 
-    
-    
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
+		
+
+                
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/2019/11/14/leetcode-155-160/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/160-1.jpg)" alt class="thumbnail-image"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/14/leetcode-155-160/">0</span>
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            <p>title: leetcode-155-160<br>date: 2019-11-14 09:39:01<br>tags:</p>
+<ul>
+<li>leetcode<br>categories:</li>
+<li>learn</li>
+</ul>
+<h2 id="leetcode155题160题："><a href="#leetcode155题160题：" class="headerlink" title="leetcode155题160题："></a>leetcode155题160题：</h2><a id="more"></a>
+<h3 id="leetcode155题（最小栈）："><a href="#leetcode155题（最小栈）：" class="headerlink" title="leetcode155题（最小栈）："></a>leetcode155题（最小栈）：</h3><p>设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。</p>
+<ul>
+<li><p>push(x) – 将元素 x 推入栈中。</p>
+</li>
+<li><p>pop() – 删除栈顶的元素。</p>
+</li>
+<li>top() – 获取栈顶元素。</li>
+<li>getMin() – 检索栈中的最小元素。</li>
+</ul>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">MinStack minStack = new MinStack();</span><br><span class="line">minStack.push(-2);</span><br><span class="line">minStack.push(0);</span><br><span class="line">minStack.push(-3);</span><br><span class="line">minStack.getMin();   --&gt; 返回 -3.</span><br><span class="line">minStack.pop();</span><br><span class="line">minStack.top();      --&gt; 返回 0.</span><br><span class="line">minStack.getMin();   --&gt; 返回 -2.</span><br></pre></td></tr></table></figure>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * initialize your data structure here.</span><br><span class="line"> */</span><br><span class="line">var MinStack = function() &#123;</span><br><span class="line">    this.stack = [];</span><br><span class="line">    this.temp = [];//辅助栈</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/** </span><br><span class="line"> * @param &#123;number&#125; x</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.push = function(x) &#123;</span><br><span class="line">    this.stack.push(x);</span><br><span class="line">    if(this.temp.length==0||this.temp[this.temp.length-1]&gt;=x)&#123;//保证辅助栈中，数字的排列从大到小（可相等）</span><br><span class="line">        this.temp.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.pop = function() &#123;//stack栈一定会pop，对于辅助栈，如果等于栈顶元素，则pop</span><br><span class="line">    if(this.stack.pop()==this.temp[this.temp.length-1])&#123;</span><br><span class="line">        this.temp.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.top = function() &#123;//取出栈顶元素</span><br><span class="line">    return this.stack[this.stack.length-1];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">MinStack.prototype.getMin = function() &#123;//取出辅助栈的栈顶元素</span><br><span class="line">    return this.temp[this.temp.length-1];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="leetcode160题（相交链表）："><a href="#leetcode160题（相交链表）：" class="headerlink" title="leetcode160题（相交链表）："></a>leetcode160题（相交链表）：</h3><p>编写一个程序，找到两个单链表相交的起始节点。 </p>
+<p><img src="http://cuicui88.xyz/images/160-1.jpg" alt="题目"></p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/160-2.jpg" alt="示例1"></p>
+<p><img src="http://cuicui88.xyz/images/160-3.jpg" alt="示例2"></p>
+<p><img src="http://cuicui88.xyz/images/160-4.jpg" alt="示例3"></p>
+<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><p>采用双指针的方法。</p>
+<p>我们可以将a和b两个链表强行串联起来，变成一个8字的形状。 </p>
+<p><img src="http://cuicui88.xyz/images/160-5.jpg" alt="图示"></p>
+<p>然后我们定义两个指针，一个从a链表头出发，一个从b链表头出发，因为是环形的，最终两个链表会相遇，而相遇的节点就是相交的节点 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var getIntersectionNode = function(headA, headB) &#123;</span><br><span class="line">    var a = headA;</span><br><span class="line">    var b = headB;</span><br><span class="line">    while(a!=b)&#123;</span><br><span class="line">        a = (a==null)?headB:a.next;//当a到头的时候，转到headB上去</span><br><span class="line">        b = (b==null)?headA:b.next;//当b到头的时候，转到headA上去</span><br><span class="line">    &#125;</span><br><span class="line">    return a;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2019-11-14T01:39:01.122Z" itemprop="datePublished">2019-11-14</time></div>
         </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://www.cuicui88.com/2019/11/14/leetcode-155-160/" data-id="ck2y2e9570001s4l05ipn1pv0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "winnie"
+        },
         
-        <p class="article-excerpt">
-            title: leetcode-155-160date: 2019-11-14 09:39:01tags:
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/160-1.jpg",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2019-11-14",
+        "dateCreated": "2019-11-14",
+        "dateModified": "2019-11-14",
+        "url": "https://www.cuicui88.com/2019/11/14/leetcode-155-160/",
+        "description": "title: leetcode-155-160date: 2019-11-14 09:39:01tags:
 
 leetcodecategories:
 learn
 
-leetcode155题160题：
-        </p>
-    </div>
+leetcode155题160题："
+        "wordCount": 367
+    }
+</script>
+
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/13/leetcode-169-198/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/taylor4.jpg)" alt="leetcode-169-198" class="thumbnail-image"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/13/leetcode-169-198/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-13T01:03:31.000Z" itemprop="datePublished">2019-11-13</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/13/leetcode-169-198/">leetcode-169-198</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode169题198题：
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
     
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/12/leetcode-200-206/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/200-1.jpg)" alt="leetcode-200-206" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/12/leetcode-200-206/">0</span>
-    
-</span>
+    </section>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-12T02:15:10.000Z" itemprop="datePublished">2019-11-12</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/12/leetcode-200-206/">leetcode-200-206</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode200题206题：
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/11/leetcode-207-208/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/taylor3.jpg)" alt="leetcode-207-208" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/11/leetcode-207-208/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-11T06:55:37.000Z" itemprop="datePublished">2019-11-11</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/11/leetcode-207-208/">leetcode-207-208</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode207题208题：
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/08/leetcode-215-221/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/221-1.jpg)" alt="leetcode-215-221" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/08/leetcode-215-221/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-08T03:22:48.000Z" itemprop="datePublished">2019-11-08</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/08/leetcode-215-221/">leetcode-215-221</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode215题221题：
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/07/leetcode-226-234/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/226-1.jpg)" alt="leetcode-226-234" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/07/leetcode-226-234/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-07T02:06:17.000Z" itemprop="datePublished">2019-11-07</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/07/leetcode-226-234/">leetcode-226-234</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode226题234题：
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/06/leetcode-236-238/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/236-1.jpg)" alt="leetcode-236-238" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/06/leetcode-236-238/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-06T12:10:03.000Z" itemprop="datePublished">2019-11-06</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/06/leetcode-236-238/">leetcode-236-238</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode236题238题：
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/05/leetcode-253-240-239/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/239-1.jpg)" alt="leetcode-253-240-239" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/05/leetcode-253-240-239/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-05T03:39:58.000Z" itemprop="datePublished">2019-11-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/05/leetcode-253-240-239/">leetcode-253-240-239</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode239题240题253题
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/04/leetcode-279-283/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/fanning-3.jpg)" alt="leetcode-279-283" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/04/leetcode-279-283/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-04T02:43:46.000Z" itemprop="datePublished">2019-11-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/04/leetcode-279-283/">leetcode-279-283</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode279题283题
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/11/01/leetcode-287-297/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://cuicui88.xyz/images/297-1.jpg)" alt="leetcode-287-297" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier data-disqus-url="https://www.cuicui88.com/2019/11/01/leetcode-287-297/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/learn/">learn</a>
-            </div>
-            <div class="date"><time datetime="2019-11-01T03:05:50.000Z" itemprop="datePublished">2019-11-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/11/01/leetcode-287-297/">leetcode-287-297</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            leetcode287题297题
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
-
-    <nav id="page-nav">
-        <span class="pages">第 1 页，共 3 页</span>
-        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">&raquo;</a>
-    </nav>
 
 
                         </div>
@@ -663,6 +325,19 @@ leetcode155题160题：
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/11/13/leetcode-169-198/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">leetcode-169-198</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -871,11 +546,13 @@ leetcode155题160题：
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://www.cuicui88.com/2019/11/14/leetcode-155-160/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
