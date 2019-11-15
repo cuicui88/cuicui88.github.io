@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-287-297 | 木槿少年的博客</title>
+    <title>leetcode-148-152 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode287题297题">
+    <meta name="description" content="leetcode148题152题：">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-287-297">
-<meta property="og:url" content="https://www.cuicui88.com/2019/11/01/leetcode-287-297/index.html">
+<meta property="og:title" content="leetcode-148-152">
+<meta property="og:url" content="https://www.cuicui88.com/2019/11/15/leetcode-148-152/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode287题297题">
+<meta property="og:description" content="leetcode148题152题：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/297-1.jpg">
-<meta property="og:updated_time" content="2019-11-01T03:16:20.178Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/fanning-4.jpg">
+<meta property="og:updated_time" content="2019-11-15T02:42:13.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-287-297">
-<meta name="twitter:description" content="leetcode287题297题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/297-1.jpg">
+<meta name="twitter:title" content="leetcode-148-152">
+<meta name="twitter:description" content="leetcode148题152题：">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/fanning-4.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-287-297" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-148-152" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-287-297
+        leetcode-148-152
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/11/01/leetcode-287-297/" class="article-date">
-            <time datetime="2019-11-01T03:05:50.000Z" itemprop="datePublished">2019-11-01</time>
+        <a href="/2019/11/15/leetcode-148-152/" class="article-date">
+            <time datetime="2019-11-15T02:17:28.000Z" itemprop="datePublished">2019-11-15</time>
         </a>
     </div>
 
@@ -177,19 +177,42 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode287题297题"><a href="#leetcode287题297题" class="headerlink" title="leetcode287题297题"></a>leetcode287题297题</h2><a id="more"></a>
-<h3 id="leetcode287题题目："><a href="#leetcode287题题目：" class="headerlink" title="leetcode287题题目："></a>leetcode287题题目：</h3><p>给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。</p>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输入：[1,3,4,2,2]</p>
-<p>输出：2</p>
-<p>输入：[3,1,3,4,2]</p>
-<p>输出：3</p>
-<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var findDuplicate = function(nums) &#123;</span><br><span class="line">    var result;</span><br><span class="line">    nums.sort(compare);</span><br><span class="line">    for(var i=1;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(nums[i]==nums[i-1])&#123;</span><br><span class="line">            result = nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br><span class="line">function compare(a,b)&#123;</span><br><span class="line">    return a-b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode148题152题："><a href="#leetcode148题152题：" class="headerlink" title="leetcode148题152题："></a>leetcode148题152题：</h2><a id="more"></a>
+<h3 id="leetcode148题（排序链表）："><a href="#leetcode148题（排序链表）：" class="headerlink" title="leetcode148题（排序链表）："></a>leetcode148题（排序链表）：</h3><p>在 <em>O</em>(<em>n</em> log <em>n</em>) 时间复杂度和常数级空间复杂度下，对链表进行排序。 </p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输入：4-&gt;2-&gt;1-&gt;3      输出：1-&gt;2-&gt;3-&gt;4</p>
+<p>输入：-1-&gt;5-&gt;3-&gt;4-&gt;0      输出：-1-&gt;0-&gt;3-&gt;4-&gt;5</p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><p>当题目输入的 head == Null 时，直接返回Null。</p>
+<p>通过递归实现链表归并排序，有以下两个环节：</p>
+<ol>
+<li>分割 cut 环节： </li>
+</ol>
+<ul>
+<li>找到当前链表中点，并从中点将链表断开（以便在下次递归 cut 时，链表片段拥有正确边界）；</li>
+<li>我们使用 fast,slow 快慢双指针法，奇数个节点找到中点，偶数个节点找到中心左边的节点。</li>
+<li>找到中点 slow 后，执行 slow.next = Null 将链表切断。</li>
+<li>递归分割时，输入当前链表左端点 head 和中心节点 slow 的下一个节点 mid(因为链表是从 slow 切断的)。</li>
+<li>cut 递归终止条件： 当head.next == None时，说明只有一个节点了，直接返回此节点。</li>
+</ul>
+<ol start="2">
+<li>合并 merge 环节： </li>
+</ol>
+<ul>
+<li>将两个排序链表合并，转化为一个排序链表。</li>
+<li>双指针法合并，建立辅助ListNode res(h) 作为头部。</li>
+<li>设置两指针 left, right 分别指向两链表头部，比较两指针处节点值大小，由小到大加入合并链表头部，指针交替前进，直至添加完两个链表。</li>
+<li>返回辅助ListNode h 作为头部的下个节点 h.next。</li>
+<li>时间复杂度 O(l + r)，l, r 分别代表两个链表长度。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">var sortList = function(head) &#123;//首先进行分割，递归分割为两个链表，然后进行合并排序</span><br><span class="line">    if(head==null||head.next==null)&#123;</span><br><span class="line">        return head;</span><br><span class="line">    &#125;</span><br><span class="line">    var slow = head;</span><br><span class="line">    var fast = head.next;</span><br><span class="line">    while(fast!=null&amp;&amp;fast.next!=null)&#123;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">    var mid = slow.next;</span><br><span class="line">    slow.next = null;</span><br><span class="line">    //以上将链表分割为两个链表</span><br><span class="line">    var left = sortList(head);//得到左边链表的排序结果</span><br><span class="line">    var right = sortList(mid);//得到右边链表的排序结果</span><br><span class="line">    //对两个已经有序的链表进行排序</span><br><span class="line">    var res = new ListNode(null);</span><br><span class="line">    var h = res;</span><br><span class="line">    while(left!=null&amp;&amp;right!=null)&#123;</span><br><span class="line">        if(left.val&lt;right.val)&#123;</span><br><span class="line">            res.next = left;</span><br><span class="line">            left = left.next;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            res.next = right;</span><br><span class="line">            right = right.next;</span><br><span class="line">        &#125;</span><br><span class="line">        res = res.next;</span><br><span class="line">    &#125;</span><br><span class="line">    if(left==null)&#123;</span><br><span class="line">        res.next = right;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        res.next = left;</span><br><span class="line">    &#125;</span><br><span class="line">    return h.next;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode297题："><a href="#leetcode297题：" class="headerlink" title="leetcode297题："></a>leetcode297题：</h3><p>序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。</p>
-<p>请设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，你只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。</p>
-<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/297-1.jpg" alt="示例"></p>
-<p>解答：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * function TreeNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.left = this.right = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Encodes a tree to a single string.</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;TreeNode&#125; root</span><br><span class="line"> * @return &#123;string&#125;</span><br><span class="line"> */</span><br><span class="line">var serialize = function(root) &#123;</span><br><span class="line">    var result = [];</span><br><span class="line">    function sertalize1(root)&#123;//此处使用深度优先遍历（或先序遍历）来进行实现的</span><br><span class="line">        if(root==null)&#123;</span><br><span class="line">            result.push(&apos;#&apos;);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        result.push(root.val);</span><br><span class="line">        sertalize1(root.left);</span><br><span class="line">        sertalize1(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    sertalize1(root);</span><br><span class="line">    return result.join(&apos;,&apos;);//输出是用逗号连接起来的字符串</span><br><span class="line">    //例题中的例子输出为：&quot;1,2,#,#,3,4,#,#,5,#,#&quot;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Decodes your encoded data to tree.</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;string&#125; data</span><br><span class="line"> * @return &#123;TreeNode&#125;</span><br><span class="line"> */</span><br><span class="line">var deserialize = function(data) &#123;</span><br><span class="line">    data = data.split(&quot;,&quot;);</span><br><span class="line">    var index = 0;</span><br><span class="line">   </span><br><span class="line">    function deserializer(data) &#123;</span><br><span class="line">        if(index &gt; data.length || data[index] === &quot;#&quot;) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        var node = new TreeNode(parseInt(data[index]));</span><br><span class="line">        index++;</span><br><span class="line">        node.left = deserializer(data);</span><br><span class="line">        index++;</span><br><span class="line">        node.right = deserializer(data);</span><br><span class="line">        return node;</span><br><span class="line">    &#125;    </span><br><span class="line">    return deserializer(data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Your functions will be called as such:</span><br><span class="line"> * deserialize(serialize(root));</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+<h3 id="leetcode152题（乘积最大子序列）："><a href="#leetcode152题（乘积最大子序列）：" class="headerlink" title="leetcode152题（乘积最大子序列）："></a>leetcode152题（乘积最大子序列）：</h3><p>给定一个整数数组 <code>nums</code> ，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。 </p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>输入：[2,3,-2,4]      输出：6</p>
+<p>解释：子数组[2,3]有最大乘积6.</p>
+<p>输入：[-2,0,-1]       输出：0</p>
+<p>解释：结果不能为2，因为[-2,-1]不是子数组.</p>
+<h5 id="解答（动态规划）："><a href="#解答（动态规划）：" class="headerlink" title="解答（动态规划）："></a>解答（动态规划）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">我们先定义一个数组 dpMax，用 dpMax[i] 表示以第 i 个元素的结尾的子数组，乘积最大的值，也就是这个数组必须包含第 i 个元素。那么 dpMax[i] 的话有以下几种取值：</span><br><span class="line"></span><br><span class="line">1. 当 nums[i] &gt;= 0 并且dpMax[i-1] &gt; 0，dpMax[i] = dpMax[i-1] * nums[i]</span><br><span class="line">2. 当 nums[i] &gt;= 0 并且dpMax[i-1] &lt; 0，此时如果和前边的数累乘的话，会变成负数，所以dpMax[i] = nums[i]</span><br><span class="line"></span><br><span class="line">当 nums[i] &lt; 0，此时如果前边累乘结果是一个很大的负数，和当前负数累乘的话就会变成一个更大的数。所以我们还需要一个数组 dpMin 来记录以第 i 个元素的结尾的子数组，乘积最小的值。</span><br><span class="line">3. 当dpMin[i-1] &lt; 0，dpMax[i] = dpMin[i-1] * nums[i]</span><br><span class="line">4. 当dpMin[i-1] &gt;= 0，dpMax[i] = nums[i]</span><br><span class="line"></span><br><span class="line">当然，上边引入了 dpMin 数组，怎么求 dpMin 其实和上边求 dpMax 的过程其实是一样的。</span><br><span class="line"></span><br><span class="line">按上边的分析，我们就需要加很多的 if else来判断不同的情况，这里可以用个技巧。</span><br><span class="line">我们注意到上边dpMax[i] 的取值无非就是三种，dpMax[i-1] * nums[i]、dpMin[i-1] * nums[i] 以及 nums[i]。</span><br><span class="line">所以我们更新的时候，无需去区分当前是哪种情况，只需要从三个取值中选一个最大的即可。</span><br><span class="line">dpMax[i] = max(dpMax[i-1] * nums[i], dpMin[i-1] * nums[i], nums[i]);</span><br><span class="line"></span><br><span class="line">求 dpMin[i] 同理。</span><br><span class="line">dpMin[i] = min(dpMax[i-1] * nums[i], dpMin[i-1] * nums[i], nums[i]);</span><br><span class="line"></span><br><span class="line">更新过程中，我们可以用一个变量 max 去保存当前得到的最大值。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var maxProduct = function(nums) &#123;</span><br><span class="line">    var dpMax = nums[0];</span><br><span class="line">    var dpMin = nums[0];</span><br><span class="line">    var max = nums[0];</span><br><span class="line">    for(var i=1;i&lt;nums.length;i++)&#123;</span><br><span class="line">        var preMax = dpMax;</span><br><span class="line">        dpMax = Math.max(dpMax*nums[i],nums[i],dpMin*nums[i]);</span><br><span class="line">        dpMin = Math.min(preMax*nums[i],nums[i],dpMin*nums[i]);</span><br><span class="line">        max = Math.max(max,dpMax);</span><br><span class="line">    &#125;</span><br><span class="line">    return max;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="http://cuicui88.xyz/images/fanning-4.jpg" alt="艾丽·范宁"></p>
 
         </div>
         <footer class="article-footer">
@@ -197,7 +220,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/11/01/leetcode-287-297/" data-id="ck2zjewzq0011f4l0jweonk5p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/15/leetcode-148-152/" data-id="ck2zjewxw0005f4l0p9bdeypi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -267,16 +290,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-287-297",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/297-1.jpg",
+        "headline": "leetcode-148-152",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/fanning-4.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-11-01",
-        "dateCreated": "2019-11-01",
-        "dateModified": "2019-11-01",
-        "url": "https://www.cuicui88.com/2019/11/01/leetcode-287-297/",
-        "description": "leetcode287题297题"
-        "wordCount": 577
+        "datePublished": "2019-11-15",
+        "dateCreated": "2019-11-15",
+        "dateModified": "2019-11-15",
+        "url": "https://www.cuicui88.com/2019/11/15/leetcode-148-152/",
+        "description": "leetcode148题152题："
+        "wordCount": 674
     }
 </script>
 
@@ -324,20 +347,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/11/04/leetcode-279-283/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-279-283
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/10/31/leetcode-300-301-312/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/14/leetcode-155-160/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode-300-301-312</p>
+        <p class="article-nav-title">leetcode-155-160</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -551,7 +564,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/11/01/leetcode-287-297/';
+    var disqus_url = 'https://www.cuicui88.com/2019/11/15/leetcode-148-152/';
     
     (function() {
     var dsq = document.createElement('script');
