@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-279-283 | 木槿少年的博客</title>
+    <title>leetcode-136-139-141 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode279题283题">
+    <meta name="description" content="leetcode136题139题141题">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-279-283">
-<meta property="og:url" content="https://www.cuicui88.com/2019/11/04/leetcode-279-283/index.html">
+<meta property="og:title" content="leetcode-136-139-141">
+<meta property="og:url" content="https://www.cuicui88.com/2019/11/19/leetcode-136-139-141/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode279题283题">
+<meta property="og:description" content="leetcode136题139题141题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/fanning-3.jpg">
-<meta property="og:updated_time" content="2019-11-04T03:11:05.915Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/141-1.jpg">
+<meta property="og:updated_time" content="2019-11-19T02:40:36.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-279-283">
-<meta name="twitter:description" content="leetcode279题283题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/fanning-3.jpg">
+<meta name="twitter:title" content="leetcode-136-139-141">
+<meta name="twitter:description" content="leetcode136题139题141题">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/141-1.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-279-283" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-136-139-141" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-279-283
+        leetcode-136-139-141
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/11/04/leetcode-279-283/" class="article-date">
-            <time datetime="2019-11-04T02:43:46.000Z" itemprop="datePublished">2019-11-04</time>
+        <a href="/2019/11/19/leetcode-136-139-141/" class="article-date">
+            <time datetime="2019-11-19T02:27:54.000Z" itemprop="datePublished">2019-11-19</time>
         </a>
     </div>
 
@@ -177,23 +177,32 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode279题283题"><a href="#leetcode279题283题" class="headerlink" title="leetcode279题283题"></a>leetcode279题283题</h2><a id="more"></a>
-<h3 id="leetcode279题（完全平方数）："><a href="#leetcode279题（完全平方数）：" class="headerlink" title="leetcode279题（完全平方数）："></a>leetcode279题（完全平方数）：</h3><p>给定正整数 <em>n</em>，找到若干个完全平方数（比如 <code>1, 4, 9, 16, ...</code>）使得它们的和等于 <em>n</em>。你需要让组成和的完全平方数的个数最少。 </p>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输出：n=12</p>
-<p>输出：3</p>
-<p>解释：12 = 4+4+4</p>
-<p>输出：n=13</p>
-<p>输出：2</p>
-<p>解释：12 = 4+9</p>
-<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var numSquares = function(n) &#123;//动态规划</span><br><span class="line">    var dp = [];</span><br><span class="line">    for(var i=0;i&lt;=n;i++)&#123;</span><br><span class="line">        dp[i] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        dp[i] = i;//下面取两个数中的最小值，因此此处需要定义结果最大值</span><br><span class="line">        for(var j=0;i-j*j&gt;=0;j++)&#123;</span><br><span class="line">            dp[i] = Math.min(dp[i],dp[i-j*j]+1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[n];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode136题139题141题"><a href="#leetcode136题139题141题" class="headerlink" title="leetcode136题139题141题"></a>leetcode136题139题141题</h2><a id="more"></a>
+<h3 id="leetcode136题（只出现一次的数字）："><a href="#leetcode136题（只出现一次的数字）：" class="headerlink" title="leetcode136题（只出现一次的数字）："></a>leetcode136题（只出现一次的数字）：</h3><p>给定一个<strong>非空</strong>整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。 </p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输入：[2,2,1] </p>
+<p>输出：1</p>
+<p>输入：[4,1,2,1,2]</p>
+<p>输出：4</p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">//方法1</span><br><span class="line">var singleNumber = function(nums) &#123;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(nums.indexOf(nums[i])==nums.lastIndexOf(nums[i]))&#123;</span><br><span class="line">            return nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//方法2</span><br><span class="line">var singleNumber = function(nums) &#123;</span><br><span class="line">    obj = &#123;&#125;;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(obj[nums[i]]==undefined)&#123;</span><br><span class="line">            obj[nums[i]]=1;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            obj[nums[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var prop in obj)&#123;</span><br><span class="line">        if(obj[prop]==1)&#123;</span><br><span class="line">            return prop;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//方法3</span><br><span class="line">var singleNumber = function(nums) &#123;</span><br><span class="line">    var ans = 0;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        ans = ans^nums[i];//一个数与0异或得到自己，与自己异或得到零（因此出现两次的自己与自己异或之后得到0）</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode283题（移动零）："><a href="#leetcode283题（移动零）：" class="headerlink" title="leetcode283题（移动零）："></a>leetcode283题（移动零）：</h3><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。 </p>
-<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>输入：[0,1,0,3,12]</p>
-<p>输出：[1,3,12,0,0]</p>
-<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var moveZeroes = function(nums) &#123;//复杂度为O(n^2)的解法</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(nums[i]==0)&#123;//思想：统计某个为0的数字后面是否还有非零，如果有非零数字，那么执行splice+push的操作（此处需要i--,否则会跳过0后面的数字）</span><br><span class="line">            var count = 0;</span><br><span class="line">            for(var j=i;j&lt;nums.length;j++)&#123;</span><br><span class="line">                if(nums[j]==0)&#123;</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if(count!=nums.length-i)&#123;</span><br><span class="line">                nums.push(nums[i]);</span><br><span class="line">                nums.splice(i,1);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return nums;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var moveZeroes = function(nums) &#123;//只设置一个指针，将碰到的非0数字用lastIndex的下标记录在nums中（这个时候前面的0与非0的元素都已经处理了，不会出现覆盖的情况），然后将其与nums原长度之差的最后的地方放置为0</span><br><span class="line">    var lastIndex = 0;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(nums[i]!=0)&#123;</span><br><span class="line">            nums[lastIndex++] = nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var j=lastIndex;j&lt;nums.length;j++)&#123;</span><br><span class="line">        nums[j] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    return nums;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var moveZeroes = function(nums) &#123;//采用双指针的方法，slow始终指向最开始的0</span><br><span class="line">    for(var slow=0,fast=0;fast&lt;nums.length;fast++)&#123;</span><br><span class="line">        if(nums[fast]!=0)&#123;//fast指向0后面的第一个非零数进行处理</span><br><span class="line">            var temp = nums[fast];</span><br><span class="line">            nums[fast] = nums[slow];</span><br><span class="line">            nums[slow] = temp;</span><br><span class="line">            slow++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return nums;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://cuicui88.xyz/images/fanning-3.jpg" alt="艾丽.范宁"></p>
+<h3 id="leetcode139题（单词拆分）："><a href="#leetcode139题（单词拆分）：" class="headerlink" title="leetcode139题（单词拆分）："></a>leetcode139题（单词拆分）：</h3><p>给定一个非空字符串 s 和一个包含非空单词列表的字典 wordDict，判定 s 是否可以被空格拆分为一个或多个在字典中出现的单词。</p>
+<p>说明：</p>
+<ul>
+<li><p>拆分时可以重复使用字典中的单词。</p>
+</li>
+<li><p>你可以假设字典中没有重复的单词</p>
+</li>
+</ul>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>输入: s = “leetcode”, wordDict = [“leet”, “code”]<br>输出: true<br>解释: 返回 true 因为 “leetcode” 可以被拆分成 “leet code”。</p>
+<p>输入: s = “applepenapple”, wordDict = [“apple”, “pen”]<br>输出: true<br>解释: 返回 true 因为 “applepenapple” 可以被拆分成 “apple pen apple”。<br>     注意你可以重复使用字典中的单词。</p>
+<p>输入: s = “catsandog”, wordDict = [“cats”, “dog”, “sand”, “and”, “cat”]<br>输出: false</p>
+<h5 id="解答（动态规划）："><a href="#解答（动态规划）：" class="headerlink" title="解答（动态规划）："></a>解答（动态规划）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var wordBreak = function(s, wordDict) &#123;</span><br><span class="line">    var dp = [];//代表以该下标之前的字符串是否可由字典表组成</span><br><span class="line">    dp[0] = true;</span><br><span class="line">    for(var i=1;i&lt;=s.length;i++)&#123;</span><br><span class="line">        dp[i] = false;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=1;i&lt;=s.length;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;i;j++)&#123;</span><br><span class="line">            if(dp[j]&amp;&amp;(wordDict.indexOf(s.slice(j,i))!=-1))&#123;</span><br><span class="line">                dp[i] = true;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[s.length];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="leetcode141题（环形链表）："><a href="#leetcode141题（环形链表）：" class="headerlink" title="leetcode141题（环形链表）："></a>leetcode141题（环形链表）：</h3><p>给定一个链表，判断链表中是否有环。</p>
+<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
+<h5 id="示例：-2"><a href="#示例：-2" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/141-1.jpg" alt="示例"></p>
+<p><img src="http://cuicui88.xyz/images/141-2.jpg" alt="示例"></p>
+<h5 id="解答（可参考142题）："><a href="#解答（可参考142题）：" class="headerlink" title="解答（可参考142题）："></a>解答（可参考142题）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var hasCycle = function(head) &#123;</span><br><span class="line">    var slow = head;</span><br><span class="line">    var fast = head;</span><br><span class="line">    while(fast!=null&amp;&amp;fast.next!=null)&#123;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">        if(slow==fast)&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -201,7 +210,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/11/04/leetcode-279-283/" data-id="ck359429w001ak4l0rrer8d5o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/19/leetcode-136-139-141/" data-id="ck359424o0005k4l0bj3edhtg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -271,16 +280,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-279-283",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/fanning-3.jpg",
+        "headline": "leetcode-136-139-141",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/141-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-11-04",
-        "dateCreated": "2019-11-04",
-        "dateModified": "2019-11-04",
-        "url": "https://www.cuicui88.com/2019/11/04/leetcode-279-283/",
-        "description": "leetcode279题283题"
-        "wordCount": 638
+        "datePublished": "2019-11-19",
+        "dateCreated": "2019-11-19",
+        "dateModified": "2019-11-19",
+        "url": "https://www.cuicui88.com/2019/11/19/leetcode-136-139-141/",
+        "description": "leetcode136题139题141题"
+        "wordCount": 637
     }
 </script>
 
@@ -328,20 +337,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/11/05/leetcode-253-240-239/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-253-240-239
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/11/01/leetcode-287-297/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/18/leetcode-142-146/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode-287-297</p>
+        <p class="article-nav-title">leetcode-142-146</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -555,7 +554,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/11/04/leetcode-279-283/';
+    var disqus_url = 'https://www.cuicui88.com/2019/11/19/leetcode-136-139-141/';
     
     (function() {
     var dsq = document.createElement('script');
