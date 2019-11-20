@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode124题128题leetcode124题（二叉树中的最大路径和）：给定一个非空二叉树，返回其最大路径和。 本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。 示例： 解答：123456789101112131415var maxPathSum = function(root) &amp;#123;    var maxSum = -">
+    <meta name="description" content="leetcode124题128题">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode-124-128">
 <meta property="og:url" content="https://www.cuicui88.com/2019/11/20/leetcode-124-128/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode124题128题leetcode124题（二叉树中的最大路径和）：给定一个非空二叉树，返回其最大路径和。 本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。 示例： 解答：123456789101112131415var maxPathSum = function(root) &amp;#123;    var maxSum = -">
+<meta property="og:description" content="leetcode124题128题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://cuicui88.xyz/images/124-1.jpg">
-<meta property="og:updated_time" content="2019-11-20T02:42:05.697Z">
+<meta property="og:updated_time" content="2019-11-20T02:45:48.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-124-128">
-<meta name="twitter:description" content="leetcode124题128题leetcode124题（二叉树中的最大路径和）：给定一个非空二叉树，返回其最大路径和。 本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。 示例： 解答：123456789101112131415var maxPathSum = function(root) &amp;#123;    var maxSum = -">
+<meta name="twitter:description" content="leetcode124题128题">
 <meta name="twitter:image" content="http://cuicui88.xyz/images/124-1.jpg">
     
 
@@ -177,7 +177,8 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode124题128题"><a href="#leetcode124题128题" class="headerlink" title="leetcode124题128题"></a>leetcode124题128题</h2><h3 id="leetcode124题（二叉树中的最大路径和）："><a href="#leetcode124题（二叉树中的最大路径和）：" class="headerlink" title="leetcode124题（二叉树中的最大路径和）："></a>leetcode124题（二叉树中的最大路径和）：</h3><p>给定一个<strong>非空</strong>二叉树，返回其最大路径和。</p>
+            <h2 id="leetcode124题128题"><a href="#leetcode124题128题" class="headerlink" title="leetcode124题128题"></a>leetcode124题128题</h2><a id="more"></a>
+<h3 id="leetcode124题（二叉树中的最大路径和）："><a href="#leetcode124题（二叉树中的最大路径和）：" class="headerlink" title="leetcode124题（二叉树中的最大路径和）："></a>leetcode124题（二叉树中的最大路径和）：</h3><p>给定一个<strong>非空</strong>二叉树，返回其最大路径和。</p>
 <p>本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径<strong>至少包含一个</strong>节点，且不一定经过根节点。</p>
 <h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/124-1.jpg" alt="示例"></p>
 <h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var maxPathSum = function(root) &#123;</span><br><span class="line">    var maxSum = -Infinity;</span><br><span class="line">    function maxGain(root)&#123;//包含根节点的一边最大路径和</span><br><span class="line">        if(root==null)&#123;//如果节点不存在，返回0</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">        var left_gain = Math.max(maxGain(root.left),0);//左边的最大路径和</span><br><span class="line">        var right_gain = Math.max(maxGain(root.right),0);//右边的最大路径和</span><br><span class="line">        var newPathGain = root.val + left_gain + right_gain;//包含根节点在内的两边最大路径和</span><br><span class="line">        maxSum = Math.max(maxSum,newPathGain);//取二者最大值</span><br><span class="line">        return root.val+Math.max(left_gain,right_gain);//</span><br><span class="line">    &#125;</span><br><span class="line">    maxGain(root);</span><br><span class="line">    return maxSum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -193,7 +194,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/11/20/leetcode-124-128/" data-id="ck36omiqo0001wgl0p9209le8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/20/leetcode-124-128/" data-id="ck36owll60004vwl0wfzhov9t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -271,11 +272,8 @@
         "dateCreated": "2019-11-20",
         "dateModified": "2019-11-20",
         "url": "https://www.cuicui88.com/2019/11/20/leetcode-124-128/",
-        "description": "leetcode124题128题leetcode124题（二叉树中的最大路径和）：给定一个非空二叉树，返回其最大路径和。
-本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。
-示例：
-解答：123456789101112131415var maxPathSum = function(root) &#123;    var maxSum = -"
-        "wordCount": 413
+        "description": "leetcode124题128题"
+        "wordCount": 414
     }
 </script>
 
