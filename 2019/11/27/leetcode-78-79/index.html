@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-279-283 | 木槿少年的博客</title>
+    <title>leetcode-78-79 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode279题283题">
+    <meta name="description" content="leetcode78题79题：">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-279-283">
-<meta property="og:url" content="https://www.cuicui88.com/2019/11/04/leetcode-279-283/index.html">
+<meta property="og:title" content="leetcode-78-79">
+<meta property="og:url" content="https://www.cuicui88.com/2019/11/27/leetcode-78-79/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode279题283题">
+<meta property="og:description" content="leetcode78题79题：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/fanning-3.jpg">
-<meta property="og:updated_time" content="2019-11-04T03:11:05.915Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/小k-1.jpg">
+<meta property="og:updated_time" content="2019-11-27T03:11:45.068Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-279-283">
-<meta name="twitter:description" content="leetcode279题283题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/fanning-3.jpg">
+<meta name="twitter:title" content="leetcode-78-79">
+<meta name="twitter:description" content="leetcode78题79题：">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/小k-1.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-279-283" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-78-79" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-279-283
+        leetcode-78-79
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/11/04/leetcode-279-283/" class="article-date">
-            <time datetime="2019-11-04T02:43:46.000Z" itemprop="datePublished">2019-11-04</time>
+        <a href="/2019/11/27/leetcode-78-79/" class="article-date">
+            <time datetime="2019-11-27T03:02:42.000Z" itemprop="datePublished">2019-11-27</time>
         </a>
     </div>
 
@@ -177,23 +177,17 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode279题283题"><a href="#leetcode279题283题" class="headerlink" title="leetcode279题283题"></a>leetcode279题283题</h2><a id="more"></a>
-<h3 id="leetcode279题（完全平方数）："><a href="#leetcode279题（完全平方数）：" class="headerlink" title="leetcode279题（完全平方数）："></a>leetcode279题（完全平方数）：</h3><p>给定正整数 <em>n</em>，找到若干个完全平方数（比如 <code>1, 4, 9, 16, ...</code>）使得它们的和等于 <em>n</em>。你需要让组成和的完全平方数的个数最少。 </p>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输出：n=12</p>
-<p>输出：3</p>
-<p>解释：12 = 4+4+4</p>
-<p>输出：n=13</p>
-<p>输出：2</p>
-<p>解释：12 = 4+9</p>
-<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var numSquares = function(n) &#123;//动态规划</span><br><span class="line">    var dp = [];</span><br><span class="line">    for(var i=0;i&lt;=n;i++)&#123;</span><br><span class="line">        dp[i] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        dp[i] = i;//下面取两个数中的最小值，因此此处需要定义结果最大值</span><br><span class="line">        for(var j=0;i-j*j&gt;=0;j++)&#123;</span><br><span class="line">            dp[i] = Math.min(dp[i],dp[i-j*j]+1);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[n];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode78题79题："><a href="#leetcode78题79题：" class="headerlink" title="leetcode78题79题："></a>leetcode78题79题：</h2><a id="more"></a>
+<h3 id="leetcode78题（子集）："><a href="#leetcode78题（子集）：" class="headerlink" title="leetcode78题（子集）："></a>leetcode78题（子集）：</h3><p>给定一组不含重复元素的整数数组 <em>nums</em>，返回该数组所有可能的子集（幂集）。</p>
+<p>说明：解集不能包含重复的子集。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [1,2,3]</span><br><span class="line">输出:</span><br><span class="line">[</span><br><span class="line">  [3],</span><br><span class="line">  [1],</span><br><span class="line">  [2],</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [1,3],</span><br><span class="line">  [2,3],</span><br><span class="line">  [1,2],</span><br><span class="line">  []</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h5 id="解答（回溯法）："><a href="#解答（回溯法）：" class="headerlink" title="解答（回溯法）："></a>解答（回溯法）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var subsets = function(nums) &#123;</span><br><span class="line">    var result = [];</span><br><span class="line">    var path = [];</span><br><span class="line">    nums.sort(compare);//先将数组排序，方便后面进行处理</span><br><span class="line">    dfs(nums,path,0,result);</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br><span class="line">function compare(a,b)&#123;</span><br><span class="line">    return a-b;</span><br><span class="line">&#125;</span><br><span class="line">function dfs(nums,path,cur,result)&#123;//表示此轮将给path数组中位置为cur的数组元素赋值</span><br><span class="line">    result.push(path.slice(0,cur));//将上一轮设置好的数组放在结果数组里面</span><br><span class="line">    if(cur==nums.length)&#123;//cur已经到了数组的最后一个元素</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        //当cur不为0且path的cur-1位置的元素大于等于即将添加的元素，那么开始下一轮循环</span><br><span class="line">        if(cur&amp;&amp;path[cur-1]&gt;=nums[i])&#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        path[cur] = nums[i];</span><br><span class="line">        dfs(nums,path,cur+1,result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode283题（移动零）："><a href="#leetcode283题（移动零）：" class="headerlink" title="leetcode283题（移动零）："></a>leetcode283题（移动零）：</h3><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。 </p>
-<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>输入：[0,1,0,3,12]</p>
-<p>输出：[1,3,12,0,0]</p>
-<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var moveZeroes = function(nums) &#123;//复杂度为O(n^2)的解法</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(nums[i]==0)&#123;//思想：统计某个为0的数字后面是否还有非零，如果有非零数字，那么执行splice+push的操作（此处需要i--,否则会跳过0后面的数字）</span><br><span class="line">            var count = 0;</span><br><span class="line">            for(var j=i;j&lt;nums.length;j++)&#123;</span><br><span class="line">                if(nums[j]==0)&#123;</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if(count!=nums.length-i)&#123;</span><br><span class="line">                nums.push(nums[i]);</span><br><span class="line">                nums.splice(i,1);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return nums;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var moveZeroes = function(nums) &#123;//只设置一个指针，将碰到的非0数字用lastIndex的下标记录在nums中（这个时候前面的0与非0的元素都已经处理了，不会出现覆盖的情况），然后将其与nums原长度之差的最后的地方放置为0</span><br><span class="line">    var lastIndex = 0;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(nums[i]!=0)&#123;</span><br><span class="line">            nums[lastIndex++] = nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var j=lastIndex;j&lt;nums.length;j++)&#123;</span><br><span class="line">        nums[j] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    return nums;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var moveZeroes = function(nums) &#123;//采用双指针的方法，slow始终指向最开始的0</span><br><span class="line">    for(var slow=0,fast=0;fast&lt;nums.length;fast++)&#123;</span><br><span class="line">        if(nums[fast]!=0)&#123;//fast指向0后面的第一个非零数进行处理</span><br><span class="line">            var temp = nums[fast];</span><br><span class="line">            nums[fast] = nums[slow];</span><br><span class="line">            nums[slow] = temp;</span><br><span class="line">            slow++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return nums;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://cuicui88.xyz/images/fanning-3.jpg" alt="艾丽.范宁"></p>
+<h3 id="leetcode79题（单词搜索）："><a href="#leetcode79题（单词搜索）：" class="headerlink" title="leetcode79题（单词搜索）："></a>leetcode79题（单词搜索）：</h3><p>给定一个二维网格和一个单词，找出该单词是否存在于网格中。</p>
+<p>单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。</p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">board =</span><br><span class="line">[</span><br><span class="line">  [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;E&apos;],</span><br><span class="line">  [&apos;S&apos;,&apos;F&apos;,&apos;C&apos;,&apos;S&apos;],</span><br><span class="line">  [&apos;A&apos;,&apos;D&apos;,&apos;E&apos;,&apos;E&apos;]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">给定 word = &quot;ABCCED&quot;, 返回 true.</span><br><span class="line">给定 word = &quot;SEE&quot;, 返回 true.</span><br><span class="line">给定 word = &quot;ABCB&quot;, 返回 false.</span><br></pre></td></tr></table></figure>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">var exist = function(board, word) &#123;</span><br><span class="line">    if(board.length==0||word.length==0)&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    var d = [[-1,0],[0,1],[1,0],[0,-1]];//四周数组</span><br><span class="line">    var x = board.length;</span><br><span class="line">    var y = board[0].length;</span><br><span class="line">    var visited = [];//该数组用来标记某个位置的字母是否被遍历了</span><br><span class="line">    for(var i=0;i&lt;x;i++)&#123;</span><br><span class="line">        visited[i] = [];</span><br><span class="line">        for(var j=0;j&lt;y;j++)&#123;</span><br><span class="line">            visited[i][j] = false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=0;i&lt;x;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;y;j++)&#123;</span><br><span class="line">            if(process(board,i,j,word,0,x,y,visited,d))&#123;//判断单词的首字母以i,j位置上的字母开头，是否可以遍历到字符串</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;//以所有的位置开始，都遍历不到，说明找不到，那么返回false</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function process(board,row,column,word,index,x,y,visited,d)&#123;</span><br><span class="line">    if(index == word.length-1)&#123;//说明找到单词的最后一个字符了</span><br><span class="line">        return board[row][column]==word[index];</span><br><span class="line">    &#125;</span><br><span class="line">    if(board[row][column]==word[index])&#123;</span><br><span class="line">        visited[row][column] = true;//表示这个位置的元素被遍历过了</span><br><span class="line">        for(var h=0;h&lt;d.length;h++)&#123;//遍历四周数组，得到新行新列</span><br><span class="line">            var newRow = row+d[h][0];</span><br><span class="line">            var newColumn = column+d[h][1];</span><br><span class="line">            //如果新的行值和新的列值是合法的，并且该位置字符没有被遍历过，同时其process方法返回true,那么返回true</span><br><span class="line">            if(judgeLegal(newRow,newColumn,x,y)&amp;&amp;!visited[newRow][newColumn]&amp;&amp;process(board,newRow,newColumn,word,index+1,x,y,visited,d))&#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        //执行到这里，说明从该位置开始到后面，没有找到完全匹配的方式</span><br><span class="line">        visited[row][column] = false;//要回溯到其它方位</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function judgeLegal(row,column,x,y)&#123;//判断得到的坐标值是否合法</span><br><span class="line">    return row&gt;=0 &amp;&amp; column&gt;=0 &amp;&amp; row&lt;x &amp;&amp; column&lt;y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://cuicui88.xyz/images/小k-1.jpg" alt="示例"></p>
 
         </div>
         <footer class="article-footer">
@@ -201,7 +195,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/11/04/leetcode-279-283/" data-id="ck3gps34s00167kl0d3np5vas" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/27/leetcode-78-79/" data-id="ck3gps370002k7kl0nbrin1qi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -271,16 +265,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-279-283",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/fanning-3.jpg",
+        "headline": "leetcode-78-79",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/小k-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-11-04",
-        "dateCreated": "2019-11-04",
-        "dateModified": "2019-11-04",
-        "url": "https://www.cuicui88.com/2019/11/04/leetcode-279-283/",
-        "description": "leetcode279题283题"
-        "wordCount": 638
+        "datePublished": "2019-11-27",
+        "dateCreated": "2019-11-27",
+        "dateModified": "2019-11-27",
+        "url": "https://www.cuicui88.com/2019/11/27/leetcode-78-79/",
+        "description": "leetcode78题79题："
+        "wordCount": 742
     }
 </script>
 
@@ -328,20 +322,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/11/05/leetcode-253-240-239/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-253-240-239
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/11/01/leetcode-287-297/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/26/leetcode-84-85-94/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode-287-297</p>
+        <p class="article-nav-title">leetcode-84-85-94</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -555,7 +539,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/11/04/leetcode-279-283/';
+    var disqus_url = 'https://www.cuicui88.com/2019/11/27/leetcode-78-79/';
     
     (function() {
     var dsq = document.createElement('script');
