@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-112-113-437 | 木槿少年的博客</title>
+    <title>leetcode-70-72 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode 112题 113题 437题">
+    <meta name="description" content="leetcode70题72题：">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-112-113-437">
-<meta property="og:url" content="https://www.cuicui88.com/2019/10/22/leetcode-112-113-437/index.html">
+<meta property="og:title" content="leetcode-70-72">
+<meta property="og:url" content="https://www.cuicui88.com/2019/11/29/leetcode-70-72/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode 112题 113题 437题">
+<meta property="og:description" content="leetcode70题72题：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/112-1.jpg">
-<meta property="og:updated_time" content="2019-10-22T15:26:09.851Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/taylor5.jpg">
+<meta property="og:updated_time" content="2019-11-29T08:27:26.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-112-113-437">
-<meta name="twitter:description" content="leetcode 112题 113题 437题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/112-1.jpg">
+<meta name="twitter:title" content="leetcode-70-72">
+<meta name="twitter:description" content="leetcode70题72题：">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/taylor5.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-112-113-437" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-70-72" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-112-113-437
+        leetcode-70-72
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/10/22/leetcode-112-113-437/" class="article-date">
-            <time datetime="2019-10-22T14:18:27.000Z" itemprop="datePublished">2019-10-22</time>
+        <a href="/2019/11/29/leetcode-70-72/" class="article-date">
+            <time datetime="2019-11-29T08:18:15.000Z" itemprop="datePublished">2019-11-29</time>
         </a>
     </div>
 
@@ -177,23 +177,27 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode-112题-113题-437题"><a href="#leetcode-112题-113题-437题" class="headerlink" title="leetcode 112题 113题 437题"></a>leetcode 112题 113题 437题</h2><a id="more"></a>
-<h3 id="leetcode-112题题目："><a href="#leetcode-112题题目：" class="headerlink" title="leetcode 112题题目："></a>leetcode 112题题目：</h3><p>给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。</p>
-<p><strong>说明:</strong> 叶子节点是指没有子节点的节点。</p>
-<p><img src="http://cuicui88.xyz/images/112-1.jpg" alt="示例"></p>
-<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var hasPathSum = function(root, sum) &#123;</span><br><span class="line">    if(root==null)&#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    if(root.left==null&amp;&amp;root.right==null)&#123;</span><br><span class="line">        return sum-root.val==0;</span><br><span class="line">    &#125;</span><br><span class="line">    return hasPathSum(root.left,sum-root.val)||hasPathSum(root.right,sum-root.val);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode70题72题："><a href="#leetcode70题72题：" class="headerlink" title="leetcode70题72题："></a>leetcode70题72题：</h2><a id="more"></a>
+<h3 id="leetcode70题（爬楼梯）："><a href="#leetcode70题（爬楼梯）：" class="headerlink" title="leetcode70题（爬楼梯）："></a>leetcode70题（爬楼梯）：</h3><p>假设你正在爬楼梯。需要 <em>n</em> 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p><strong>注意：</strong>给定 <em>n</em> 是一个正整数。</p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输入： 2<br>输出： 2<br>解释： 有两种方法可以爬到楼顶。（1 阶 + 1 阶；2 阶）</p>
+<p>输入： 3<br>输出： 3<br>解释： 有三种方法可以爬到楼顶。（1 阶 + 1 阶 + 1 阶；1 阶 + 2 阶；2 阶 + 1 阶）</p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var climbStairs = function(n) &#123;</span><br><span class="line">    if(n==1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;else if(n==2)&#123;</span><br><span class="line">        return 2;</span><br><span class="line">    &#125;</span><br><span class="line">    var n1 = 1;</span><br><span class="line">    var n2 = 2;</span><br><span class="line">    while(n--&gt;2)&#123;</span><br><span class="line">        temp = n2;</span><br><span class="line">        n2 = n1 + n2;</span><br><span class="line">        n1 = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return n2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode113题题目："><a href="#leetcode113题题目：" class="headerlink" title="leetcode113题题目："></a>leetcode113题题目：</h3><p>给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。</p>
-<p><strong>说明:</strong> 叶子节点是指没有子节点的节点。</p>
-<p><img src="http://cuicui88.xyz/images/113-1.jpg" alt="示例"></p>
-<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var pathSum = function(root, sum) &#123; </span><br><span class="line">    var result = [];</span><br><span class="line">    get(root,0,[],result);</span><br><span class="line">    </span><br><span class="line">    function get(node,currentSum,currentList,result)&#123;</span><br><span class="line">        if(node==null)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        currentSum = currentSum + node.val;</span><br><span class="line">        currentList.push(node.val);</span><br><span class="line">        if(node.left==null&amp;&amp;node.right==null)&#123;</span><br><span class="line">            if(currentSum==sum)&#123;</span><br><span class="line">                result.push(JSON.parse(JSON.stringify(currentList)));</span><br><span class="line">                //console.log(result);</span><br><span class="line">            &#125;</span><br><span class="line">            currentList.pop();</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        get(node.left,currentSum,currentList,result);</span><br><span class="line">        get(node.right,currentSum,currentList,result);</span><br><span class="line">        currentList.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="leetcode437题题目："><a href="#leetcode437题题目：" class="headerlink" title="leetcode437题题目："></a>leetcode437题题目：</h3><p>给定一个二叉树，它的每个结点都存放着一个整数值。</p>
-<p>找出路径和等于给定数值的路径总数。</p>
-<p>路径不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。</p>
-<p>二叉树不超过1000个节点，且节点数值范围是 [-1000000,1000000] 的整数。</p>
-<p><img src="http://cuicui88.xyz/images/437-1.jpg" alt="示例"></p>
-<h5 id="解答：-2"><a href="#解答：-2" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var pathSum = function(root, sum) &#123;</span><br><span class="line">    var count = 0;</span><br><span class="line">    function pathSum1(root,sum)&#123;</span><br><span class="line">        if(root==null)&#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">        Sum(root,sum);</span><br><span class="line">        pathSum1(root.left,sum);</span><br><span class="line">        pathSum1(root.right,sum);</span><br><span class="line">    &#125;</span><br><span class="line">    function Sum(root,sum)&#123;</span><br><span class="line">        if(root==null)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        sum = sum - root.val;</span><br><span class="line">        if(sum==0)&#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        Sum(root.left,sum);</span><br><span class="line">        Sum(root.right,sum);</span><br><span class="line">    &#125;</span><br><span class="line">    pathSum1(root,sum);</span><br><span class="line">    return count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="leetcode72题（编辑距离）："><a href="#leetcode72题（编辑距离）：" class="headerlink" title="leetcode72题（编辑距离）："></a>leetcode72题（编辑距离）：</h3><p>给定两个单词 word1 和 word2，计算出将 word1 转换成 word2 所使用的最少操作数 。</p>
+<p>你可以对一个单词进行如下三种操作：</p>
+<ul>
+<li><p>插入一个字符</p>
+</li>
+<li><p>删除一个字符</p>
+</li>
+<li>替换一个字符</li>
+</ul>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>输入: word1 = “horse”, word2 = “ros”<br>输出: 3<br>解释:<br>horse -&gt; rorse (将 ‘h’ 替换为 ‘r’)<br>rorse -&gt; rose (删除 ‘r’)<br>rose -&gt; ros (删除 ‘e’)</p>
+<p>输入: word1 = “intention”, word2 = “execution”<br>输出: 5<br>解释:<br>intention -&gt; inention (删除 ‘t’)<br>inention -&gt; enention (将 ‘i’ 替换为 ‘e’)<br>enention -&gt; exention (将 ‘n’ 替换为 ‘x’)<br>exention -&gt; exection (将 ‘n’ 替换为 ‘c’)<br>exection -&gt; execution (插入 ‘u’)</p>
+<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">var minDistance = function(word1, word2) &#123;</span><br><span class="line">    var m = word1.length;</span><br><span class="line">    var n = word2.length;</span><br><span class="line">    var dp = [];</span><br><span class="line">    for(var i=0;i&lt;=m;i++)&#123;</span><br><span class="line">        dp[i] = [];</span><br><span class="line">        for(var j=0;j&lt;=n;j++)&#123;</span><br><span class="line">            dp[i][j] = 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=1;i&lt;=m;i++)&#123;</span><br><span class="line">        dp[i][0] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var j=1;j&lt;=n;j++)&#123;</span><br><span class="line">        dp[0][j] = j;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=1;i&lt;=m;i++)&#123;</span><br><span class="line">        for(var j=1;j&lt;=n;j++)&#123;</span><br><span class="line">            if(word1[i-1]==word2[j-1])&#123;</span><br><span class="line">                dp[i][j] = dp[i-1][j-1];</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                dp[i][j] = Math.min(dp[i-1][j]+1,dp[i-1][j-1]+1,dp[i][j-1]+1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[m][n];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="http://cuicui88.xyz/images/taylor5.jpg" alt="taylor·swift"></p>
 
         </div>
         <footer class="article-footer">
@@ -201,7 +205,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/22/leetcode-112-113-437/" data-id="ck3jvwr4y0008n8l028ypu3ax" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/11/29/leetcode-70-72/" data-id="ck3jvwr7y0021n8l0022jctzg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -271,16 +275,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-112-113-437",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/112-1.jpg",
+        "headline": "leetcode-70-72",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/taylor5.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-10-22",
-        "dateCreated": "2019-10-22",
-        "dateModified": "2019-10-22",
-        "url": "https://www.cuicui88.com/2019/10/22/leetcode-112-113-437/",
-        "description": "leetcode 112题 113题 437题"
-        "wordCount": 604
+        "datePublished": "2019-11-29",
+        "dateCreated": "2019-11-29",
+        "dateModified": "2019-11-29",
+        "url": "https://www.cuicui88.com/2019/11/29/leetcode-70-72/",
+        "description": "leetcode70题72题："
+        "wordCount": 538
     }
 </script>
 
@@ -328,20 +332,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/10/25/leetcode-406-416/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-406-416
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/10/21/leetcode-448-461/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/28/leetcode-75-76/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode-448-461</p>
+        <p class="article-nav-title">leetcode-75-76</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -555,7 +549,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/10/22/leetcode-112-113-437/';
+    var disqus_url = 'https://www.cuicui88.com/2019/11/29/leetcode-70-72/';
     
     (function() {
     var dsq = document.createElement('script');
