@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-494-538 | 木槿少年的博客</title>
+    <title>leetcode-53-55-56-62-64 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode 494 538题">
+    <meta name="description" content="leetcode53题55题56题62题64题">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-494-538">
-<meta property="og:url" content="https://www.cuicui88.com/2019/10/21/leetcode-494-538/index.html">
+<meta property="og:title" content="leetcode-53-55-56-62-64">
+<meta property="og:url" content="https://www.cuicui88.com/2019/12/01/leetcode-53-55-56-62-64/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode 494 538题">
+<meta property="og:description" content="leetcode53题55题56题62题64题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/494-1.jpg">
-<meta property="og:updated_time" content="2019-10-21T04:03:35.301Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/62-1.jpg">
+<meta property="og:updated_time" content="2019-12-01T09:13:00.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-494-538">
-<meta name="twitter:description" content="leetcode 494 538题">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/494-1.jpg">
+<meta name="twitter:title" content="leetcode-53-55-56-62-64">
+<meta name="twitter:description" content="leetcode53题55题56题62题64题">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/62-1.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-494-538" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-53-55-56-62-64" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-494-538
+        leetcode-53-55-56-62-64
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/10/21/leetcode-494-538/" class="article-date">
-            <time datetime="2019-10-21T03:49:17.000Z" itemprop="datePublished">2019-10-21</time>
+        <a href="/2019/12/01/leetcode-53-55-56-62-64/" class="article-date">
+            <time datetime="2019-12-01T08:53:40.000Z" itemprop="datePublished">2019-12-01</time>
         </a>
     </div>
 
@@ -177,15 +177,41 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode-494-538题"><a href="#leetcode-494-538题" class="headerlink" title="leetcode 494 538题"></a>leetcode 494 538题</h2><a id="more"></a>
-<h3 id="leetcode-494题题目："><a href="#leetcode-494题题目：" class="headerlink" title="leetcode 494题题目："></a>leetcode 494题题目：</h3><p>给定一个非负整数数组，a1, a2, …, an, 和一个目标数，S。现在你有两个符号 + 和 -。对于数组中的任意一个整数，你都可以从 + 或 -中选择一个符号添加在前面。</p>
-<p>返回可以使最终数组和为目标数 S 的所有添加符号的方法数。</p>
-<p><img src="http://cuicui88.xyz/images/494-1.jpg" alt="示例"></p>
-<h4 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var findTargetSumWays = function(nums, S) &#123;</span><br><span class="line">    var sum = 0;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        sum = sum + nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    if(sum&lt;S||(sum+S)%2!=0)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    var arr = [];</span><br><span class="line">    var w = parseInt((sum+S)/2);</span><br><span class="line">    for(var j=0;j&lt;w+1;j++)&#123;</span><br><span class="line">        arr[j] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    arr[0] = 1;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        for(var j=w;j&gt;=nums[i];j--)&#123;</span><br><span class="line">            arr[j] = arr[j] + arr[j-nums[i]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr[w];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode53题55题56题62题64题"><a href="#leetcode53题55题56题62题64题" class="headerlink" title="leetcode53题55题56题62题64题"></a>leetcode53题55题56题62题64题</h2><a id="more"></a>
+<h3 id="leetcode53题（最大子序和）："><a href="#leetcode53题（最大子序和）：" class="headerlink" title="leetcode53题（最大子序和）："></a>leetcode53题（最大子序和）：</h3><p>给定一个整数数组 <code>nums</code> ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 </p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>输入: [-2,1,-3,4,-1,2,1,-5,4],<br>输出: 6<br>解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。</p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var maxSubArray = function(nums) &#123;</span><br><span class="line">    var sum = nums[0];</span><br><span class="line">    var maxSum = Math.max(sum,-Infinity);</span><br><span class="line">    for(var i=1;i&lt;nums.length;i++)&#123;</span><br><span class="line">        if(sum&lt;0)&#123;</span><br><span class="line">            sum = nums[i];</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            sum = sum + nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        maxSum = Math.max(sum,maxSum);</span><br><span class="line">    &#125;</span><br><span class="line">    return maxSum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode538题题目："><a href="#leetcode538题题目：" class="headerlink" title="leetcode538题题目："></a>leetcode538题题目：</h3><p>给定一个二叉搜索树（Binary Search Tree），把它转换成为累加树（Greater Tree)，使得每个节点的值是原来的节点值加上所有大于它的节点值之和。</p>
-<p><img src="http://cuicui88.xyz/images/538-1.jpg" alt="示例"></p>
-<h4 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var convertBST = function(root) &#123;</span><br><span class="line">    var num = 0;</span><br><span class="line">    function convert1(root)&#123;</span><br><span class="line">        if(root==null)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        convert1(root.right);</span><br><span class="line">        root.val = root.val + num;</span><br><span class="line">        num = root.val;</span><br><span class="line">        convert1(root.left);</span><br><span class="line">    &#125;</span><br><span class="line">    convert1(root);</span><br><span class="line">    return root;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="leetcode55题（跳跃游戏）："><a href="#leetcode55题（跳跃游戏）：" class="headerlink" title="leetcode55题（跳跃游戏）："></a>leetcode55题（跳跃游戏）：</h3><p>给定一个非负整数数组，你最初位于数组的第一个位置。</p>
+<p>数组中的每个元素代表你在该位置可以跳跃的最大长度。</p>
+<p>判断你是否能够到达最后一个位置。</p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>输入: [2,3,1,1,4]<br>输出: true<br>解释: 我们可以先跳 1 步，从位置 0 到达 位置 1, 然后再从位置 1 跳 3 步到达最后一个位置。</p>
+<p>输入: [3,2,1,0,4]<br>输出: false<br>解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。</p>
+<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var canJump = function(nums) &#123;</span><br><span class="line">    var k = 0;//k表示目前能跳到的最远的位置</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        //如果前面最远能调到的位置小于i，表示无法到达i位置</span><br><span class="line">        if(i&gt;k)&#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        //在i时的时候最远能调到k位置</span><br><span class="line">        k = Math.max(k,nums[i]+i);</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="leetcode56题（合并区间）："><a href="#leetcode56题（合并区间）：" class="headerlink" title="leetcode56题（合并区间）："></a>leetcode56题（合并区间）：</h3><p>给出一个区间的集合，请合并所有重叠的区间。 </p>
+<h5 id="示例：-2"><a href="#示例：-2" class="headerlink" title="示例："></a>示例：</h5><p>输入: [[1,3],[2,6],[8,10],[15,18]]<br>输出: [[1,6],[8,10],[15,18]]<br>解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</p>
+<p>输入: [[1,4],[4,5]]<br>输出: [[1,5]]<br>解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。</p>
+<h5 id="解答：-2"><a href="#解答：-2" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var merge = function(intervals) &#123;</span><br><span class="line">    var result = [];</span><br><span class="line">    intervals.sort(compare);</span><br><span class="line">    var i=0;</span><br><span class="line">    var len = intervals.length;</span><br><span class="line">    while(i&lt;len)&#123;</span><br><span class="line">        var currLeft = intervals[i][0];</span><br><span class="line">        var currRight = intervals[i][1];</span><br><span class="line">        while(i&lt;len-1&amp;&amp;intervals[i+1][0]&lt;=currRight)&#123;</span><br><span class="line">            i++;</span><br><span class="line">            currRight = Math.max(currRight,intervals[i][1]);</span><br><span class="line">        &#125;</span><br><span class="line">        result.push([currLeft,currRight]);</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;;</span><br><span class="line">function compare(arr1,arr2)&#123;</span><br><span class="line">    return arr1[0]-arr2[0];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="leetcode62题（不同路径）："><a href="#leetcode62题（不同路径）：" class="headerlink" title="leetcode62题（不同路径）："></a>leetcode62题（不同路径）：</h3><p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。</p>
+<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
+<p>问总共有多少条不同的路径？</p>
+<p><img src="http://cuicui88.xyz/images/62-1.jpg" alt="图"></p>
+<h5 id="示例：-3"><a href="#示例：-3" class="headerlink" title="示例："></a>示例：</h5><p>输入: m = 3, n = 2<br>输出: 3<br>解释:<br>从左上角开始，总共有 3 条路径可以到达右下角。</p>
+<ol>
+<li>向右 -&gt; 向右 -&gt; 向下</li>
+<li>向右 -&gt; 向下 -&gt; 向右</li>
+<li>向下 -&gt; 向右 -&gt; 向右</li>
+</ol>
+<p>输入: m = 7, n = 3<br>输出: 28</p>
+<h5 id="解答：-3"><a href="#解答：-3" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//解法一，这里采用的数组为二维数组</span><br><span class="line">var uniquePaths = function(m, n) &#123;</span><br><span class="line">    var dp = [];</span><br><span class="line">    for(var i=0;i&lt;m;i++)&#123;</span><br><span class="line">        dp[i] = [];</span><br><span class="line">        for(var j=0;j&lt;n;j++)&#123;</span><br><span class="line">            dp[i][j] = 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=0;i&lt;m;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;n;j++)&#123;</span><br><span class="line">            if(i==0&amp;&amp;j==0)&#123;</span><br><span class="line">                dp[i][j] = 1;</span><br><span class="line">            &#125;else if(i==0&amp;&amp;j!=0)&#123;</span><br><span class="line">                dp[i][j] = dp[i][j-1];</span><br><span class="line">            &#125;else if(i!=0&amp;&amp;j==0)&#123;</span><br><span class="line">                dp[i][j] = dp[i-1][j];</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                dp[i][j] = dp[i][j-1]+dp[i-1][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[m-1][n-1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var uniquePaths = function(m, n) &#123;</span><br><span class="line">    if(m&lt;=0||n&lt;=0)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    if(m==1||n==1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    var dp = [];</span><br><span class="line">    dp[0] = 1;</span><br><span class="line">    for(var i=1;i&lt;n;i++)&#123;</span><br><span class="line">        dp[i] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=0;i&lt;m;i++)&#123;</span><br><span class="line">        for(var j=1;j&lt;n;j++)&#123;</span><br><span class="line">            //采用空间压缩的方式，dp[j]存储上一行该j位置上的元素，dp[j-1]存储的是这一行前一列的元素</span><br><span class="line">            dp[j] = dp[j]+dp[j-1];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[n-1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="leetcode64（最小路径和）："><a href="#leetcode64（最小路径和）：" class="headerlink" title="leetcode64（最小路径和）："></a>leetcode64（最小路径和）：</h3><p>给定一个包含非负整数的 <em>m</em> x <em>n</em> 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
+<p><strong>说明：</strong>每次只能向下或者向右移动一步。</p>
+<h5 id="示例：-4"><a href="#示例：-4" class="headerlink" title="示例："></a>示例：</h5><p>输入:<br>[<br>  [1,3,1],<br>  [1,5,1],<br>  [4,2,1]<br>]<br>输出: 7<br>解释: 因为路径 1→3→1→1→1 的总和最小。</p>
+<h5 id="解答：-4"><a href="#解答：-4" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var minPathSum = function(grid) &#123;</span><br><span class="line">    var row = grid.length;</span><br><span class="line">    var column = grid[0].length;</span><br><span class="line">    for(var i=0;i&lt;row;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;column;j++)&#123;</span><br><span class="line">            if(i==0&amp;&amp;j==0)&#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;else if(i==0)&#123;</span><br><span class="line">                grid[i][j] = grid[i][j-1]+grid[i][j];</span><br><span class="line">            &#125;else if(j==0)&#123;</span><br><span class="line">                grid[i][j] = grid[i-1][j]+grid[i][j];</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                grid[i][j] = Math.min(grid[i-1][j],grid[i][j-1])+grid[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return grid[row-1][column-1];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -193,7 +219,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/10/21/leetcode-494-538/" data-id="ck3msfnb7001uj0l0sgolwcd2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/12/01/leetcode-53-55-56-62-64/" data-id="ck3msfnb4001rj0l0cwpzr3qu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -263,16 +289,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-494-538",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/494-1.jpg",
+        "headline": "leetcode-53-55-56-62-64",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/62-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-10-21",
-        "dateCreated": "2019-10-21",
-        "dateModified": "2019-10-21",
-        "url": "https://www.cuicui88.com/2019/10/21/leetcode-494-538/",
-        "description": "leetcode 494 538题"
-        "wordCount": 363
+        "datePublished": "2019-12-01",
+        "dateCreated": "2019-12-01",
+        "dateModified": "2019-12-01",
+        "url": "https://www.cuicui88.com/2019/12/01/leetcode-53-55-56-62-64/",
+        "description": "leetcode53题55题56题62题64题"
+        "wordCount": 1247
     }
 </script>
 
@@ -320,20 +346,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/10/21/leetcode-448-461/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-448-461
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/10/18/leetcode-543-560/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/29/leetcode-70-72/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode-543-560</p>
+        <p class="article-nav-title">leetcode-70-72</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -547,7 +563,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/10/21/leetcode-494-538/';
+    var disqus_url = 'https://www.cuicui88.com/2019/12/01/leetcode-53-55-56-62-64/';
     
     (function() {
     var dsq = document.createElement('script');
