@@ -6,26 +6,26 @@
     
 
     
-    <title>leetcode-142-146 | 木槿少年的博客</title>
+    <title>leetcode-39-42-46 | 木槿少年的博客</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="leetcode">
     
-    <meta name="description" content="leetcode142题146题：">
+    <meta name="description" content="leetcode39题42题46题：">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode-142-146">
-<meta property="og:url" content="https://www.cuicui88.com/2019/11/18/leetcode-142-146/index.html">
+<meta property="og:title" content="leetcode-39-42-46">
+<meta property="og:url" content="https://www.cuicui88.com/2019/12/06/leetcode-39-42-46/index.html">
 <meta property="og:site_name" content="木槿少年的博客">
-<meta property="og:description" content="leetcode142题146题：">
+<meta property="og:description" content="leetcode39题42题46题：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://cuicui88.xyz/images/142-1.jpg">
-<meta property="og:updated_time" content="2019-11-18T04:18:38.387Z">
+<meta property="og:image" content="http://cuicui88.xyz/images/39-1.jpg">
+<meta property="og:updated_time" content="2019-12-06T08:27:33.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode-142-146">
-<meta name="twitter:description" content="leetcode142题146题：">
-<meta name="twitter:image" content="http://cuicui88.xyz/images/142-1.jpg">
+<meta name="twitter:title" content="leetcode-39-42-46">
+<meta name="twitter:description" content="leetcode39题42题46题：">
+<meta name="twitter:image" content="http://cuicui88.xyz/images/39-1.jpg">
     
 
     
@@ -143,14 +143,14 @@
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-leetcode-142-146" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-leetcode-39-42-46" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        leetcode-142-146
+        leetcode-39-42-46
         </h1>
     
 
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/11/18/leetcode-142-146/" class="article-date">
-            <time datetime="2019-11-18T03:50:35.000Z" itemprop="datePublished">2019-11-18</time>
+        <a href="/2019/12/06/leetcode-39-42-46/" class="article-date">
+            <time datetime="2019-12-06T08:19:59.000Z" itemprop="datePublished">2019-12-06</time>
         </a>
     </div>
 
@@ -177,22 +177,23 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="leetcode142题146题："><a href="#leetcode142题146题：" class="headerlink" title="leetcode142题146题："></a>leetcode142题146题：</h2><a id="more"></a>
-<h3 id="leetcode142题（环形链表）："><a href="#leetcode142题（环形链表）：" class="headerlink" title="leetcode142题（环形链表）："></a>leetcode142题（环形链表）：</h3><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
-<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
-<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/142-1.jpg" alt="示例"></p>
-<p><img src="http://cuicui88.xyz/images/142-2.jpg" alt="示例"></p>
-<h5 id="解答（双指针法）："><a href="#解答（双指针法）：" class="headerlink" title="解答（双指针法）："></a>解答（双指针法）：</h5><p>假设非环部分的长度是x，从环起点到相遇点的长度是y。环的长度是c。<br>现在走的慢的那个指针走过的长度肯定是x+n1<em>c+y，走的快的那个指针的速度是走的慢的那个指针速度的两倍。这意味着走的快的那个指针走的长度是2(x+n1</em>c+y)。</p>
-<p>还有一个约束就是走的快的那个指针比走的慢的那个指针多走的路程一定是环长度的整数倍。根据上面那个式子可以知道2(x+n1<em>c+y)-x+n1</em>c+y=x+n1<em>c+y=n2</em>c。</p>
-<p>所以有x+y=(n2-n1)*c,这意味着什么？我们解读下这个数学公式：非环部分的长度+环起点到相遇点之间的长度就是环的整数倍。这在数据结构上的意义是什么？现在我们知道两个指针都在离环起点距离是y的那个相遇点，而现在x+y是环长度的整数倍，这意味着他们从相遇点再走x距离就刚刚走了很多圈，这意味着他们如果从相遇点再走x就到了起点。<br>那怎么才能再走x步呢？答：让一个指针从头部开始走，另一个指针从相遇点走，等这两个指针相遇那就走了x步此时就是环的起点。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var detectCycle = function(head) &#123;</span><br><span class="line">    var slow = head;</span><br><span class="line">    var fast = head;</span><br><span class="line">    while(fast!=null&amp;&amp;fast.next!=null)&#123;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">        if(slow == fast)&#123;//slow和fast能够相遇就表明必定有环存在</span><br><span class="line">            fast = head;//让fast重新从头指针开始，再次与slow相遇的位置就是环起点的位置</span><br><span class="line">            while(slow!=fast)&#123;</span><br><span class="line">                slow = slow.next;</span><br><span class="line">                fast = fast.next;</span><br><span class="line">            &#125;</span><br><span class="line">            return fast;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return null;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <h2 id="leetcode39题42题46题："><a href="#leetcode39题42题46题：" class="headerlink" title="leetcode39题42题46题："></a>leetcode39题42题46题：</h2><a id="more"></a>
+<h3 id="leetcode39题（组合总和）："><a href="#leetcode39题（组合总和）：" class="headerlink" title="leetcode39题（组合总和）："></a>leetcode39题（组合总和）：</h3><p>给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。</p>
+<p>candidates 中的数字可以无限制重复被选取。</p>
+<p>说明：</p>
+<p>所有数字（包括 target）都是正整数。<br>解集不能包含重复的组合。 </p>
+<h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p><img src="http://cuicui88.xyz/images/39-1.jpg" alt="示例"></p>
+<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var combinationSum = function(candidates, target) &#123;</span><br><span class="line">    var res = [];</span><br><span class="line">    var start = 0;</span><br><span class="line">    var path = [];</span><br><span class="line">    candidates = candidates.sort(compare);</span><br><span class="line">    generateCombinationSum(candidates,start,path,target,res);</span><br><span class="line">    return res;</span><br><span class="line">&#125;;</span><br><span class="line">function generateCombinationSum(candidates,start,path,residue,res)&#123;</span><br><span class="line">    if(residue==0)&#123;</span><br><span class="line">        var arr = JSON.parse(JSON.stringify(path));</span><br><span class="line">        res.push(arr);</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=start;i&lt;candidates.length&amp;&amp;residue-candidates[i]&gt;=0;i++)&#123;</span><br><span class="line">        path.push(candidates[i]);</span><br><span class="line">        generateCombinationSum(candidates,i,path,residue-candidates[i],res);</span><br><span class="line">        path.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function compare(a,b)&#123;</span><br><span class="line">    return a-b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="leetcode146题（LRU缓存机制）："><a href="#leetcode146题（LRU缓存机制）：" class="headerlink" title="leetcode146题（LRU缓存机制）："></a>leetcode146题（LRU缓存机制）：</h3><p>运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。</p>
-<p>获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。<br>写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。当缓存容量达到上限时，它应该在写入新数据之前删除最近最少使用的数据值，从而为新的数据值留出空间。</p>
-<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LRUCache cache = new LRUCache( 2 /* 缓存容量 */ );</span><br><span class="line"></span><br><span class="line">cache.put(1, 1);</span><br><span class="line">cache.put(2, 2);</span><br><span class="line">cache.get(1);       // 返回  1</span><br><span class="line">cache.put(3, 3);    // 该操作会使得密钥 2 作废</span><br><span class="line">cache.get(2);       // 返回 -1 (未找到)</span><br><span class="line">cache.put(4, 4);    // 该操作会使得密钥 1 作废</span><br><span class="line">cache.get(1);       // 返回 -1 (未找到)</span><br><span class="line">cache.get(3);       // 返回  3</span><br><span class="line">cache.get(4);       // 返回  4</span><br><span class="line"></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">链接：https://leetcode-cn.com/problems/lru-cache</span><br><span class="line">著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
-<h5 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h5><p>使用js的对象和双向链表解决;使用js的Map对象解决</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">//利用对象和双向链表解决</span><br><span class="line">/**</span><br><span class="line"> * @param &#123;number&#125; capacity</span><br><span class="line"> */</span><br><span class="line">var LRUCache = function(capacity) &#123;</span><br><span class="line">    this.capacity = capacity;</span><br><span class="line">    this.obj = &#123;&#125;;//obj中存储链表节点</span><br><span class="line">    //新建两个节点，head和tail，head后面存旧的元素，tail前面存新的元素</span><br><span class="line">    this.head = new listNode();</span><br><span class="line">    this.tail = new listNode();</span><br><span class="line">    //初始化链表</span><br><span class="line">    this.head.next = this.tail;</span><br><span class="line">    this.tail.prev = this.head;</span><br><span class="line">&#125;;</span><br><span class="line">var listNode = function(key,val)&#123;//定义双向链表节点</span><br><span class="line">    this.key = key;</span><br><span class="line">    this.val = val;</span><br><span class="line">    this.prev = null;</span><br><span class="line">    this.next = null;</span><br><span class="line">&#125;</span><br><span class="line">/** </span><br><span class="line"> * @param &#123;number&#125; key</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">LRUCache.prototype.get = function(key) &#123;</span><br><span class="line">    if(this.obj[key]!=undefined)&#123;//如果存在于对象中,将其放在链表末尾,同时返回其对应的值</span><br><span class="line">        this.moveToTail(key);</span><br><span class="line">        return this.obj[key].val;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;//否则直接返回-1</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">/** </span><br><span class="line"> * @param &#123;number&#125; key </span><br><span class="line"> * @param &#123;number&#125; value</span><br><span class="line"> * @return &#123;void&#125;</span><br><span class="line"> */</span><br><span class="line">LRUCache.prototype.put = function(key, value) &#123;</span><br><span class="line">    if(this.obj[key]!=undefined)&#123;//如果存在于对象中,就不需要在链表中添加新的节点</span><br><span class="line">    //直接更新对象中的对应值,直接将其放在链表尾部即可</span><br><span class="line">        this.obj[key].val = value; </span><br><span class="line">        this.moveToTail(key);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        var length = 0;</span><br><span class="line">        for(var prop in this.obj)&#123;//计算对象长度</span><br><span class="line">            length++;</span><br><span class="line">        &#125;</span><br><span class="line">        if(length==this.capacity)&#123;//如果长度与容量相等，需要删除链表中的节点</span><br><span class="line">            delete this.obj[this.head.next.key];</span><br><span class="line">            this.head.next = this.head.next.next;</span><br><span class="line">            this.head.next.prev = this.head;</span><br><span class="line">        &#125;</span><br><span class="line">        var newNode = new listNode(key,value);//删除之后，将新的节点添加到链表尾部</span><br><span class="line">        this.obj[key] = newNode;</span><br><span class="line">        newNode.prev = this.tail.prev;</span><br><span class="line">        newNode.next = this.tail;</span><br><span class="line">        this.tail.prev.next = newNode;</span><br><span class="line">        this.tail.prev = newNode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">//将节点移动到链表尾部的函数</span><br><span class="line">LRUCache.prototype.moveToTail = function(key) &#123;</span><br><span class="line">    node = this.obj[key];</span><br><span class="line">    node.prev.next = node.next;</span><br><span class="line">    node.next.prev = node.prev;</span><br><span class="line">    node.prev = this.tail.prev;</span><br><span class="line">    node.next = this.tail;</span><br><span class="line">    this.tail.prev.next = node;</span><br><span class="line">    this.tail.prev = node;</span><br><span class="line">&#125;</span><br><span class="line">/** </span><br><span class="line"> * Your LRUCache object will be instantiated and called as such:</span><br><span class="line"> * var obj = new LRUCache(capacity)</span><br><span class="line"> * var param_1 = obj.get(key)</span><br><span class="line"> * obj.put(key,value)</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//利用js的map数据结构解决</span><br><span class="line">var LRUCache = function(capacity) &#123;</span><br><span class="line">    this.cache = new Map();//一个Map对象在迭代时会根据对象中元素的插入顺序来进行</span><br><span class="line">    this.capacity = capacity;</span><br><span class="line">&#125;</span><br><span class="line">LRUCache.prototype.get = function(key, value) &#123;</span><br><span class="line">    let cache = this.cache;</span><br><span class="line">    if (cache.has(key)) &#123;</span><br><span class="line">        let temp = cache.get(key)</span><br><span class="line">        cache.delete(key);</span><br><span class="line">        cache.set(key, temp);//设置新值，相当于插入，那么会在最前面</span><br><span class="line">        return temp;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">LRUCache.prototype.put = function(key, value) &#123;</span><br><span class="line">    let cache = this.cache;</span><br><span class="line">    if (cache.has(key)) &#123;</span><br><span class="line">        cache.delete(key);</span><br><span class="line">    &#125; else if (cache.size &gt;= this.capacity) &#123;//如果此时容量与最大容量相等，那么需要删掉第一个</span><br><span class="line">        cache.delete(cache.keys().next().value);</span><br><span class="line">        //next()方法，调用返回一个包含两个属性的对象，分别是value和done，value表示当前位置的值，done表示是否迭代完，当为true的时候，调用next就无效了。</span><br><span class="line">    &#125;</span><br><span class="line">    cache.set(key, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="leetcode42题（接雨水）："><a href="#leetcode42题（接雨水）：" class="headerlink" title="leetcode42题（接雨水）："></a>leetcode42题（接雨水）：</h3><p>给定 <em>n</em> 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。 </p>
+<p><img src="http://cuicui88.xyz/images/42-1.jpg" alt="图"></p>
+<h5 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h5><p>输入: [0,1,0,2,1,0,1,3,2,1,2,1]<br>输出: 6</p>
+<h5 id="解答：-1"><a href="#解答：-1" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var trap = function(height) &#123;//按照列求</span><br><span class="line">    var sum = 0;</span><br><span class="line">    for(var i=1;i&lt;height.length-1;i++)&#123;//不用遍历最左边一个和最右边一个，因为它们上面不可能有水</span><br><span class="line">        var left_max = 0;//求其左边的最高高度</span><br><span class="line">        for(var j=0;j&lt;i;j++)&#123;</span><br><span class="line">            if(height[j]&gt;left_max)&#123;</span><br><span class="line">                left_max = height[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        var right_max = 0;//求其右边的最高高度</span><br><span class="line">        for(var j=i+1;j&lt;height.length;j++)&#123;</span><br><span class="line">            if(height[j]&gt;right_max)&#123;</span><br><span class="line">                right_max = height[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        var min_max = Math.min(left_max,right_max);</span><br><span class="line">        if(min_max&gt;height[i])&#123;</span><br><span class="line">            sum = sum + (min_max-height[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//改进的方法</span><br><span class="line">var trap = function(height) &#123;//按照列求，同时添加动态规划</span><br><span class="line">    var sum = 0;</span><br><span class="line">    var left = [];</span><br><span class="line">    left[0] = 0;</span><br><span class="line">    for(var i=1;i&lt;height.length-1;i++)&#123;</span><br><span class="line">        left[i] = Math.max(left[i-1],height[i-1]);</span><br><span class="line">    &#125;</span><br><span class="line">    var right = [];</span><br><span class="line">    right[height.length-1] = 0;</span><br><span class="line">    for(var i=height.length-2;i&gt;=1;i--)&#123;</span><br><span class="line">        right[i] = Math.max(right[i+1],height[i+1]);</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=1;i&lt;height.length-1;i++)&#123;</span><br><span class="line">        var min_max = Math.min(left[i],right[i]);</span><br><span class="line">        if(min_max&gt;height[i])&#123;</span><br><span class="line">            sum = sum + (min_max-height[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="leetcode46（全排列）："><a href="#leetcode46（全排列）：" class="headerlink" title="leetcode46（全排列）："></a>leetcode46（全排列）：</h3><p>给定一个<strong>没有重复</strong>数字的序列，返回其所有可能的全排列。 </p>
+<h5 id="示例：-2"><a href="#示例：-2" class="headerlink" title="示例："></a>示例：</h5><p>输入: [1,2,3]<br>输出:<br>[<br>  [1,2,3],<br>  [1,3,2],<br>  [2,1,3],<br>  [2,3,1],<br>  [3,1,2],<br>  [3,2,1]<br>]</p>
+<h5 id="解答：-2"><a href="#解答：-2" class="headerlink" title="解答："></a>解答：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">var permute = function(nums) &#123;</span><br><span class="line">    var res = [];</span><br><span class="line">    var visited = [];</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        visited[i] = false;</span><br><span class="line">    &#125;</span><br><span class="line">    var curSize = 0;</span><br><span class="line">    var len = nums.length;</span><br><span class="line">    var path = [];</span><br><span class="line">    generatePermute(nums,visited,curSize,len,res,path);</span><br><span class="line">    return res;</span><br><span class="line">&#125;;</span><br><span class="line">function generatePermute(nums,visited,curSize,len,res,path)&#123;</span><br><span class="line">    if(curSize==len)&#123;</span><br><span class="line">        var arr = JSON.parse(JSON.stringify(path));</span><br><span class="line">        res.push(arr);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    for(var i=0;i&lt;len;i++)&#123;</span><br><span class="line">        if(!visited[i])&#123;</span><br><span class="line">            path.push(nums[i]);</span><br><span class="line">            visited[i] = true;</span><br><span class="line">            generatePermute(nums,visited,curSize+1,len,res,path);</span><br><span class="line">            path.pop();</span><br><span class="line">            visited[i] = false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -200,7 +201,7 @@
 
 
 
-    <a data-url="https://www.cuicui88.com/2019/11/18/leetcode-142-146/" data-id="ck3tvzpx5000pjkl01ppkhivf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://www.cuicui88.com/2019/12/06/leetcode-39-42-46/" data-id="ck3tvzpxr001ajkl07az0v6cu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -270,16 +271,16 @@
             "@type": "Person",
             "name": "winnie"
         },
-        "headline": "leetcode-142-146",
-        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/142-1.jpg",
+        "headline": "leetcode-39-42-46",
+        "image": "https://www.cuicui88.comhttp://cuicui88.xyz/images/39-1.jpg",
         "keywords": "leetcode",
         "genre": "learn",
-        "datePublished": "2019-11-18",
-        "dateCreated": "2019-11-18",
-        "dateModified": "2019-11-18",
-        "url": "https://www.cuicui88.com/2019/11/18/leetcode-142-146/",
-        "description": "leetcode142题146题："
-        "wordCount": 1149
+        "datePublished": "2019-12-06",
+        "dateCreated": "2019-12-06",
+        "dateModified": "2019-12-06",
+        "url": "https://www.cuicui88.com/2019/12/06/leetcode-39-42-46/",
+        "description": "leetcode39题42题46题："
+        "wordCount": 927
     }
 </script>
 
@@ -327,20 +328,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/11/19/leetcode-136-139-141/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            leetcode-136-139-141
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/11/15/leetcode-148-152/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/12/02/leetcode-48-49/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">leetcode-148-152</p>
+        <p class="article-nav-title">leetcode-48-49</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -554,7 +545,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://www.cuicui88.com/2019/11/18/leetcode-142-146/';
+    var disqus_url = 'https://www.cuicui88.com/2019/12/06/leetcode-39-42-46/';
     
     (function() {
     var dsq = document.createElement('script');
